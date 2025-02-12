@@ -15,7 +15,7 @@ struct SatState {
 
 class SatelliteObject {
 protected:
-	static double orbital_height;
+	static const double orbital_height;
 	static XYZ std_dev;  // m m m
 	static double mass;  // kg
 	static double rx_power; // dBWt
