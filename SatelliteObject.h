@@ -2,6 +2,17 @@
 #ifndef SATELLITEOBJECT_H
 #define SATELLITEOBJECT_H
 
+#include "Service.h"
+
+struct SatState {
+	XYZ ecef;
+	XYZ eci;
+	BLH blh;
+	double rx_power;
+	bool visible;
+	int id;
+};
+
 class SatelliteObject {
 protected:
 	static double orbital_height;
