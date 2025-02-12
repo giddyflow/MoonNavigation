@@ -8,6 +8,7 @@
 
 using json = nlohmann::json;
 
+void ReadJson(const json& data);
 
 struct XYZ {
 	double x;
