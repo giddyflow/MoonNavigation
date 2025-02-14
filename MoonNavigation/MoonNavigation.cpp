@@ -1,9 +1,0 @@
-﻿#include <iostream>
-#include "ObjectFactory.h"
-
-int main() {
-
-	ObjectFactory factory;
-	
-	return 0;
-}

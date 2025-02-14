@@ -1,0 +1,162 @@
+{
+    "controller":{
+        "start_time": "2024 08 20 11 00 00",
+        "stop_time": "2024 08 20 11 01 00",
+        "step": 10,
+        "place": "moon" 
+    },
+    "nap":[
+        {
+            "type": "Static",
+            "info":{
+                "id": 1,
+                "snr_threshold": 100,
+                "suppress_coeff": 20,
+                "mask": 5, 
+                "power_spectral_density": -210,
+                "speed": null, 
+                "course": null,
+                "clock": {
+                    "shift0": 0,
+                    "drift0": 0,
+                    "instability": 1e-6
+                },
+                "start":{
+                    "lat": 55.0,
+                    "lon": 0.0,
+                    "h": 300.0 
+                },
+                "end":{
+                    "lat": null,
+                    "lon": null,
+                    "h": null
+                }
+            } 
+        },
+        {
+            "type": "Dynamic", 
+            "info":{
+                "id": 1,
+                "snr_threshold": 100,
+                "suppress_coeff": 20,
+                "mask": 5, 
+                "power_spectral_density": -210,
+                "speed": 20, 
+                "course": 90,
+                "clock": {
+                    "shift0": null,
+                    "drift0": null,
+                    "instability": null
+                },
+                "start":{
+                    "lat": 55.0,
+                    "lon": 0.0,
+                    "h": 800.0 
+                },
+                "end":{
+                    "lat": 40.0,
+                    "lon": 20.0,
+                    "h": 800.0
+                }
+            }
+        }
+    ],
+    "nka":[
+        {
+            "type": "Low",
+            "info":{
+                "id": 1,
+                "tx_power": 30,
+                "orbital_height": 15359,
+                "mass": 1234,
+                "clock": {
+                    "shift0": 1e-10,
+                    "drift0": 1e-11,
+                    "instability": 1e-13
+                },
+                "std_dev":{
+                    "x": 10,
+                    "y": 20,
+                    "z": 30
+                }
+            }
+        },
+        {
+            "type": "Geo",
+            "info":{
+                "id": 1,
+                "tx_power": 40,
+                "orbital_height": 35359,
+                "mass": 1684,
+                "clock": {
+                    "shift0": 1e-10,
+                    "drift0": 1e-11,
+                    "instability": 1e-13
+                },
+                "std_dev":{
+                    "x": 3,
+                    "y": 3,
+                    "z": 3
+                }
+            }
+        },
+        {
+            "type": "Medium",
+            "info": {
+                "id": 1,
+                "info": {
+                    "id": 1,
+                    "tx_power": 30,
+                    "orbital_height": 25359,
+                    "mass": 1344,
+                    "clock": {
+                        "shift0": 1e-10,
+                        "drift0": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev":{
+                        "x": 3,
+                        "y": 3,
+                        "z": 3
+                    }
+                }
+            }
+        }
+    ],
+    "interference":[
+        {
+            "type": "Dynamic",
+            "info": {
+                "id": 1,
+                "tx_power": -60,
+                "start":{
+                    "lat": 30,
+                    "lon": 20,
+                    "h": 100
+                },
+                "end":{
+                    "lat": 40,
+                    "lon": 80,
+                    "h": 200
+                }
+            }
+        },
+        {
+            "type": "Static",
+            "info": {
+                "id": 1,
+                "tx_power": -50,
+                "start":{
+                    "lat": 30,
+                    "lon": 20,
+                    "h": 100
+                },
+                "end":{
+                    "lat": null,
+                    "lon": null,
+                    "h": null
+                }
+            }
+        }
+    ]
+}

@@ -1,27 +1,40 @@
-﻿# CMakeList.txt: проект CMake для MoonNavigation; включите исходный код и определения,
-# укажите здесь логику для конкретного проекта.
-#
-cmake_minimum_required (VERSION 3.8)
+﻿cmake_minimum_required(VERSION 3.8)
+project(MoonNavigation LANGUAGES CXX)
 
-# Добавьте источник в исполняемый файл этого проекта.
+# Задаём стандарт C++
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(HEADERS
-    LowSatellite.h
-    ReceiverObject.h
-    SatelliteObject.h
-    GeoSatellite.h
-    ObjectFactory.h
-    MediumSatellite.h
-    DynamicReceiver.h
-    StaticReceiver.h
-    MoonNavigation.h
-    Service.h
+# Пути к вашим папкам
+set(HEADER_DIR "${CMAKE_SOURCE_DIR}/MoonNavigation/header")
+set(SRC_DIR    "${CMAKE_SOURCE_DIR}/MoonNavigation/src")
+
+# Если хотите добавить в пути и папку include:
+# include_directories("${CMAKE_SOURCE_DIR}/include")
+
+# Добавляем директорию с заголовками (где лежат .h/.hpp)
+include_directories(${HEADER_DIR})
+
+# Собираем список исходников (*.cpp) из папки src
+file(GLOB_RECURSE SOURCES
+    "${SRC_DIR}/*.cpp"
 )
 
-set(SOURCES
-    MoonNavigation.cpp
+# (Опционально) соберём список заголовочных файлов, чтобы IDE их видела
+file(GLOB_RECURSE HEADERS
+    "${HEADER_DIR}/*.h"
+    "${HEADER_DIR}/*.hpp"
 )
-include_directories(${CMAKE_SOURCE_DIR}/include)
-add_executable (MoonNavigation ${HEADERS} ${SOURCES})
 
-# TODO: Добавьте тесты и целевые объекты, если это необходимо.
+# Создаём исполняемый файл. Заголовки добавляем для удобства IDE,
+# хотя для сборки достаточно только SOURCES.
+add_executable(MoonNavigation
+    ${SOURCES}
+    ${HEADERS}
+)
+
+# Если нужны дополнительные библиотеки - добавьте их здесь:
+# target_link_libraries(MoonNavigation PRIVATE MyLib)
+
+# Или дополнительные пути для #include:
+target_include_directories(MoonNavigation PRIVATE "${CMAKE_SOURCE_DIR}/include")
