@@ -9,6 +9,7 @@
 #include "DynamicReceiver.h"
 #include "DynamicJam.h"
 #include "StaticJam.h"
+#include "ModelEnvironment.h"
 
 class ObjectFactory {
 public:
@@ -16,6 +17,7 @@ public:
     virtual std::shared_ptr<SatelliteObject> CreateSatellite(const std::string& type, const json& config) = 0;
     virtual std::shared_ptr<ReceiverObject> CreateReceiver(const std::string& type, const json& config) = 0;
     virtual std::shared_ptr<JamObject> CreateJam(const std::string& type, const json& config) = 0;
+    virtual std::shared_ptr<ModelEnvironment> CreateEnvironment(const std::string& place, const json& config) = 0;
 };
 
 
@@ -38,6 +40,11 @@ public:
         if (type == "Static") return std::make_shared<StaticJam>(config);
         if (type == "Dynamic") return std::make_shared<DynamicJam>(config);
         return nullptr;
+    }
+
+    std::shared_ptr<ModelEnvironment> CreateEnvironment(const std::string& place, const json& config) override {
+        //надо будет сделать разные методы для луны и земли, сейчас подразумевается земля
+        return std::make_shared<ModelEnvironment>(config);;
     }
 };
 

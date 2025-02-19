@@ -5,6 +5,16 @@
 
 using json = nlohmann::json;
 
+void ProcessEnvironment(const json& config, ConcreteObjectFactory& factory) {
+    std::string place = config["controller"]["place"];
+    const json& info = config["controller"];
+    auto env = factory.CreateEnvironment(place, info);
+    if (env) {
+        env->PrintInfo();
+    }
+}
+
+
 void ProcessSatellites(const json& config, ConcreteObjectFactory& factory) {
     for (const auto& sat_data : config) {
         if (sat_data.contains("type") && sat_data.contains("info")) {
@@ -64,6 +74,9 @@ void LoadAndCreateObjects(const std::string& filename) {
     ConcreteObjectFactory factory;
 
     // Вызов вспомогательных функций для обработки объектов
+    if (config["environment"].contains("controller")) {
+        ProcessEnvironment(config["environment"]["controller"], factory);
+    }
     if (config["objects"].contains("nap")) {
         ProcessReceivers(config["objects"]["nap"], factory);
     }
@@ -80,5 +93,5 @@ void LoadAndCreateObjects(const std::string& filename) {
 int main() {
     setlocale(LC_ALL, "Russian");
     LoadAndCreateObjects("C:\\Users\\Grigoriy.LAPTOP-U1U029UA\\source\\repos\\MoonNavigation\\MoonNavigation\\config_file.json");
-
+    std::cout << "data has been read\n";
 }

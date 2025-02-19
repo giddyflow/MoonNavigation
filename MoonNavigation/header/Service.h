@@ -28,7 +28,4 @@ struct BLH {
 	double h = 0;
 };
 
-
-void ReadJson(const json& data);
-
 #endif // !SERVICE_H

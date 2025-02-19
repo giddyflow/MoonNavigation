@@ -6,9 +6,7 @@
 
 class LowSatellite : public SatelliteObject {
 public:
-	LowSatellite(const json& config) : SatelliteObject(config) {
-
-	}
+	LowSatellite(const json& config);
 	void PrintInfo() const override {
 		std::cout << "Low Satellite created" << std::endl;
 	}

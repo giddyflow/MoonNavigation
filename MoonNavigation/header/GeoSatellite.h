@@ -6,9 +6,7 @@
 
 class GeoSatellite : public SatelliteObject {
 public:
-	GeoSatellite(const json& config) : SatelliteObject(config) {
-
-	}
+	GeoSatellite(const json& config);
 	void PrintInfo() const override {
 		std::cout << "geo Satellite created" << std::endl;
 	}

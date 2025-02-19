@@ -27,6 +27,7 @@ public:
 		mask = config["mask"];
 		snr_treshold = config["snr_treshold"];
 		power_spectral_density = config["power_spectral_density"];
+		state.id = config["id"];
 		auto start = config["start"];
 		state.blh.lat = start["lat"];
 		state.blh.lon = start["lon"];

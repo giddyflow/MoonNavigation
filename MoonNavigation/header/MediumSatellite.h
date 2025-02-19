@@ -6,9 +6,7 @@
 
 class MediumSatellite : public SatelliteObject {
 public:
-	MediumSatellite(const json& config) : SatelliteObject(config) {
-
-	}
+	MediumSatellite(const json& config);
 	void PrintInfo() const override {
 		std::cout << "medium Satellite created" << std::endl;
 	}
