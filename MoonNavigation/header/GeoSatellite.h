@@ -8,7 +8,7 @@ class GeoSatellite : public SatelliteObject {
 public:
 	GeoSatellite(const json& config);
 	void PrintInfo() const override {
-		std::cout << "geo Satellite created" << std::endl;
+		std::cout << "geo Satellite created with id " << state.id << '\n';
 	}
 };
 #endif // !GEOSATELLITE_H

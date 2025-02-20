@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Grigoriy.LAPTOP-U1U029UA/source/repos/MoonNavigation
+# Install script for directory: C:/cpp_projects/MoonNavigation
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/Grigoriy.LAPTOP-U1U029UA/source/repos/MoonNavigation/out/install/x64-Debug")
+  set(CMAKE_INSTALL_PREFIX "C:/cpp_projects/MoonNavigation/out/install/x64-Debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/Grigoriy.LAPTOP-U1U029UA/source/repos/MoonNavigation/out/build/x64-Debug/MoonNavigation/cmake_install.cmake")
+  include("C:/cpp_projects/MoonNavigation/out/build/x64-Debug/MoonNavigation/cmake_install.cmake")
 
 endif()
 
@@ -46,5 +46,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Grigoriy.LAPTOP-U1U029UA/source/repos/MoonNavigation/out/build/x64-Debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/cpp_projects/MoonNavigation/out/build/x64-Debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

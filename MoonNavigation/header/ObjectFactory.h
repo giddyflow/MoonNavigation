@@ -5,10 +5,13 @@
 #include "LowSatellite.h"
 #include "GeoSatellite.h"
 #include "MediumSatellite.h"
+
 #include "StaticReceiver.h"
 #include "DynamicReceiver.h"
+
 #include "DynamicJam.h"
 #include "StaticJam.h"
+
 #include "ModelEnvironment.h"
 
 class ObjectFactory {

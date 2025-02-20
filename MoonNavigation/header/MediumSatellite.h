@@ -8,7 +8,7 @@ class MediumSatellite : public SatelliteObject {
 public:
 	MediumSatellite(const json& config);
 	void PrintInfo() const override {
-		std::cout << "medium Satellite created" << std::endl;
+		std::cout << "medium Satellite created with id " << state.id << '\n';
 	}
 };
 #endif // !MEDIUMSATELLITE_H

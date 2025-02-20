@@ -1,5 +1,5 @@
-C:/Users/Grigoriy.LAPTOP-U1U029UA/source/repos/MoonNavigation/out/build/x64-Debug/CMakeFiles/edit_cache.dir
-C:/Users/Grigoriy.LAPTOP-U1U029UA/source/repos/MoonNavigation/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
-C:/Users/Grigoriy.LAPTOP-U1U029UA/source/repos/MoonNavigation/out/build/x64-Debug/MoonNavigation/CMakeFiles/MoonNavigation.dir
-C:/Users/Grigoriy.LAPTOP-U1U029UA/source/repos/MoonNavigation/out/build/x64-Debug/MoonNavigation/CMakeFiles/edit_cache.dir
-C:/Users/Grigoriy.LAPTOP-U1U029UA/source/repos/MoonNavigation/out/build/x64-Debug/MoonNavigation/CMakeFiles/rebuild_cache.dir
+C:/cpp_projects/MoonNavigation/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/cpp_projects/MoonNavigation/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+C:/cpp_projects/MoonNavigation/out/build/x64-Debug/MoonNavigation/CMakeFiles/MoonNavigation.dir
+C:/cpp_projects/MoonNavigation/out/build/x64-Debug/MoonNavigation/CMakeFiles/edit_cache.dir
+C:/cpp_projects/MoonNavigation/out/build/x64-Debug/MoonNavigation/CMakeFiles/rebuild_cache.dir

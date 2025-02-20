@@ -22,17 +22,16 @@ protected:
 	double power_spectral_density = 0;
 public:
 	ReceiverObject(const json& config) {
-		//std::cout << config.dump(4) << '\n';
 		suppress_coeff = config["suppress_coeff"];
 		mask = config["mask"];
 		snr_treshold = config["snr_treshold"];
 		power_spectral_density = config["power_spectral_density"];
 		state.id = config["id"];
-		auto start = config["start"];
+		auto& start = config["start"];
 		state.blh.lat = start["lat"];
 		state.blh.lon = start["lon"];
 		state.blh.h = start["h"];
-		auto clock = config["clock"];
+		auto& clock = config["clock"];
 		state.clock.drift = clock["drift"];
 		state.clock.shift = clock["shift"];
 	}

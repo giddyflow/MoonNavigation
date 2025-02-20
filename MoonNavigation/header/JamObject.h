@@ -18,7 +18,6 @@ protected:
 	double tx_power;
 public:
 	JamObject(const json& config) {
-		//std::cout << config.dump(4) << '\n';
 		tx_power = config["tx_power"];
 		auto start = config["start"];
 		state.blh.lat = start["lat"];

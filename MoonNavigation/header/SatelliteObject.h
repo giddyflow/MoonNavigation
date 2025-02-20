@@ -23,9 +23,9 @@ protected:
 	double mass;           // kg
 	double tx_power;       // dBWt
 	void InitPosition();
+	int count;
 public:
 	SatelliteObject(const json& config) {
-		//std::cout << config.dump(4) << '\n';
 		mass = config["mass"];
 		orbital_height = config["orbital_height"];
 		tx_power = config["tx_power"];
@@ -33,7 +33,7 @@ public:
 		state.clock.drift = config["clock"]["drift"];
 		state.clock.instability = config["clock"]["instability"];
 		state.id = config["id"];
-		auto std = config["std_dev"];
+		auto& std = config["std_dev"];
 		std_dev.x = std["x"];
 		std_dev.y = std["y"];
 		std_dev.z = std["z"];

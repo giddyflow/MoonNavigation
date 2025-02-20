@@ -1,11 +1,11 @@
 {
-    "environment":{
-        "controller":{
-        "start_time": "2024 08 20 11 00 00",
-        "stop_time": "2024 08 20 11 01 00",
-        "step": 10,
-        "place": "earth" 
-    }
+    "environment": {
+        "place": "moon",
+        "info": {
+            "start_time": "2024 08 20 11 00 00",
+            "stop_time": "2024 08 20 12 00 00",
+            "step": 10
+        }
     },
     "objects":{
         "nap":[

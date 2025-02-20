@@ -5,9 +5,9 @@
 
 using json = nlohmann::json;
 
-void ProcessEnvironment(const json& config, ConcreteObjectFactory& factory) {
-    std::string place = config["controller"]["place"];
-    const json& info = config["controller"];
+static void ProcessEnvironment(const json& config, ConcreteObjectFactory& factory) {
+    std::string place = config["place"];
+    const json& info = config["info"];
     auto env = factory.CreateEnvironment(place, info);
     if (env) {
         env->PrintInfo();
@@ -15,7 +15,7 @@ void ProcessEnvironment(const json& config, ConcreteObjectFactory& factory) {
 }
 
 
-void ProcessSatellites(const json& config, ConcreteObjectFactory& factory) {
+static void ProcessSatellites(const json& config, ConcreteObjectFactory& factory) {
     for (const auto& sat_data : config) {
         if (sat_data.contains("type") && sat_data.contains("info")) {
             std::string type = sat_data["type"];
@@ -28,7 +28,7 @@ void ProcessSatellites(const json& config, ConcreteObjectFactory& factory) {
     }
 }
 
-void ProcessReceivers(const json& config, ConcreteObjectFactory& factory) {
+static void ProcessReceivers(const json& config, ConcreteObjectFactory& factory) {
     for (const auto& recv_data : config) {
         if (recv_data.contains("type") && recv_data.contains("info")) {
             std::string type = recv_data["type"];
@@ -41,7 +41,7 @@ void ProcessReceivers(const json& config, ConcreteObjectFactory& factory) {
     }
 }
 
-void ProcessInterference(const json& config, ConcreteObjectFactory& factory) {
+static void ProcessInterference(const json& config, ConcreteObjectFactory& factory) {
     for (const auto& jam_data : config) {
         if (jam_data.contains("type") && jam_data.contains("info")) {
             std::string type = jam_data["type"];
@@ -54,7 +54,7 @@ void ProcessInterference(const json& config, ConcreteObjectFactory& factory) {
     }
 }
 
-void LoadAndCreateObjects(const std::string& filename) {
+static void LoadAndCreateObjects(const std::string& filename) {
     std::ifstream file(filename);
     if (!file) {
         std::cerr << "Ошибка: не удалось открыть файл " << filename << std::endl;
@@ -64,7 +64,6 @@ void LoadAndCreateObjects(const std::string& filename) {
     json config;
     try {
         file >> config;
-        //std::cout << config.dump(4) << '\n';
     }
     catch (std::exception& e) {
         std::cerr << "Ошибка при чтении JSON: " << e.what() << std::endl;
@@ -73,9 +72,8 @@ void LoadAndCreateObjects(const std::string& filename) {
 
     ConcreteObjectFactory factory;
 
-    // Вызов вспомогательных функций для обработки объектов
-    if (config["environment"].contains("controller")) {
-        ProcessEnvironment(config["environment"]["controller"], factory);
+    if (config.contains("environment")) {
+        ProcessEnvironment(config["environment"], factory);
     }
     if (config["objects"].contains("nap")) {
         ProcessReceivers(config["objects"]["nap"], factory);
@@ -92,6 +90,6 @@ void LoadAndCreateObjects(const std::string& filename) {
 
 int main() {
     setlocale(LC_ALL, "Russian");
-    LoadAndCreateObjects("C:\\Users\\Grigoriy.LAPTOP-U1U029UA\\source\\repos\\MoonNavigation\\MoonNavigation\\config_file.json");
+    LoadAndCreateObjects("C:\\cpp_projects\\MoonNavigation\\MoonNavigation\\config_file.json");
     std::cout << "data has been read\n";
 }
