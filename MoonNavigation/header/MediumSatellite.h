@@ -6,12 +6,13 @@
 
 class MediumSatellite : public SatelliteObject {
 private:
-	void Update(std::shared_ptr<NewStepEvent> eventData) override {
-
-	}
 	std::shared_ptr<Bus> eventBus;
 public:
 	MediumSatellite(const json& config, std::shared_ptr<Bus> bus);
+	void initOrbitParams();
+	void posUpdateSimpleOrbital(double t);
+	void ephUpdate();
+	void Update(std::shared_ptr<NewStepEvent> eventData) override;
 	void PrintInfo() const override {
 		std::cout << "medium Satellite created with id " << state.id << '\n';
 	}

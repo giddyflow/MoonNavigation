@@ -141,6 +141,14 @@ build MoonNavigation\CMakeFiles\MoonNavigation.dir\src\SatelliteObject.cpp.obj: 
   TARGET_COMPILE_PDB = MoonNavigation\CMakeFiles\MoonNavigation.dir\
   TARGET_PDB = MoonNavigation\MoonNavigation.pdb
 
+build MoonNavigation\CMakeFiles\MoonNavigation.dir\src\Service.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\Service.cpp || cmake_object_order_depends_target_MoonNavigation
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
+  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include
+  OBJECT_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir
+  OBJECT_FILE_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir\src
+  TARGET_COMPILE_PDB = MoonNavigation\CMakeFiles\MoonNavigation.dir\
+  TARGET_PDB = MoonNavigation\MoonNavigation.pdb
+
 build MoonNavigation\CMakeFiles\MoonNavigation.dir\src\StaticJam.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\StaticJam.cpp || cmake_object_order_depends_target_MoonNavigation
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
   INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include
@@ -165,7 +173,7 @@ build MoonNavigation\CMakeFiles\MoonNavigation.dir\src\StaticReceiver.cpp.obj: C
 #############################################
 # Link the executable MoonNavigation\MoonNavigation.exe
 
-build MoonNavigation\MoonNavigation.exe: CXX_EXECUTABLE_LINKER__MoonNavigation_Debug MoonNavigation\CMakeFiles\MoonNavigation.dir\src\DynamicJam.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\DynamicReceiver.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\GeoSatellite.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\LowSatellite.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\MediumSatellite.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\ModelEnvironment.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\MoonNavigation.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\SatelliteObject.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\StaticJam.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\StaticReceiver.cpp.obj
+build MoonNavigation\MoonNavigation.exe: CXX_EXECUTABLE_LINKER__MoonNavigation_Debug MoonNavigation\CMakeFiles\MoonNavigation.dir\src\DynamicJam.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\DynamicReceiver.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\GeoSatellite.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\LowSatellite.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\MediumSatellite.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\ModelEnvironment.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\MoonNavigation.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\SatelliteObject.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\Service.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\StaticJam.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\StaticReceiver.cpp.obj
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

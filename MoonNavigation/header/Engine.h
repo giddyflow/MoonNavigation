@@ -27,7 +27,6 @@ public:
 
 class Bus {
     std::unordered_map<std::string, std::vector<std::function<void(std::shared_ptr<Event>)>>> eventHandlers;
-
 public: 
     void subscribe(const std::string& eventName, std::function<void(std::shared_ptr<Event>)> handler) {
         eventHandlers[eventName].push_back(handler);
