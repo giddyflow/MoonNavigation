@@ -7,7 +7,10 @@
 #include <fstream>
 #include <sstream>
 #include <iomanip>
-#include <iostream>
+#include <iostream> 
+#include <unordered_map>
+#include <vector>
+#include <functional>
 #include <nlohmann/json.hpp>
 
 using json = nlohmann::json;

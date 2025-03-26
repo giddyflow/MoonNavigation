@@ -6,12 +6,14 @@
 
 class StaticJam : public JamObject {
 private:
-	XYZ finish_ecef;
-	BLH finish_blh;
+	XYZ coords_ecef;
+	BLH coords_blh;
+	std::shared_ptr<Bus> eventBus;
+	void Update(std::shared_ptr<NewStepEvent> new_step) override {
+		int a = 10;
+	}
 public:
-	StaticJam(const json& config);
-	void Update() override;
-
+	StaticJam(const json& config, std::shared_ptr<Bus> bus);
 	void PrintInfo() const override {
 		std::cout << "stat jam created" << std::endl;
 	}

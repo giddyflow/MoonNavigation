@@ -11,10 +11,10 @@ private:
 	BLH finish_coords;
 	void LoxodromeStep();
 	void EasyStep();
-	void Update() override;
-	void CalcPosition() override;
+	std::shared_ptr<Bus> eventBus;
+	void Update(std::shared_ptr<NewStepEvent> new_step) override { int a = 5; }
 public:
-	DynamicReceiver(const json& config);
+	DynamicReceiver(const json& config, std::shared_ptr<Bus> bus);
 	void PrintInfo() const override {
 		std::cout << "dyn rec created" << std::endl;
 	}

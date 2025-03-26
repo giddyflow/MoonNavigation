@@ -1,13 +1,5 @@
 #include "StaticReceiver.h"
 
-StaticReceiver::StaticReceiver(const json& config) : ReceiverObject(config){
+StaticReceiver::StaticReceiver(const json& config, std::shared_ptr<Bus> bus) : ReceiverObject(config, bus){
 
-}
-
-void StaticReceiver::Update() {
-	int a = 5;
-}
-
-void StaticReceiver::CalcPosition() {
-	int b = 5;
 }

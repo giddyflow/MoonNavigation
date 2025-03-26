@@ -17,9 +17,9 @@ private:
 	double start_time = 0;
 	double step;
 	double stop_time;
-	std::vector<std::shared_ptr<SatelliteObject>> satellites;
-	std::vector<std::shared_ptr<ReceiverObject>> receivers;
-	std::vector<std::shared_ptr<JamObject>> jams;
+	//std::vector<std::shared_ptr<SatelliteObject>> satellites;
+	//std::vector<std::shared_ptr<ReceiverObject>> receivers;
+	//std::vector<std::shared_ptr<JamObject>> jams;
 public:
 	ModelEnvironment(const json& config);
 	void PrintInfo() { std::cout << "env has been created\n"; }
