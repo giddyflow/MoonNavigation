@@ -13,9 +13,15 @@ public:
 class NewStepEvent : public Event {
 public:
     double currentTime;
-
     NewStepEvent(double time) : currentTime(time) {}
     ~NewStepEvent() {}
+};
+
+class StartSecondsEvent : public Event {
+public:
+    double start_seconds;
+    StartSecondsEvent(double seconds) : start_seconds(seconds) {}
+    ~StartSecondsEvent() {}
 };
 
 class Object {
@@ -47,36 +53,23 @@ private:
     double start_time = 0;
     double step;
     double stop_time;
+    double start_seconds; // переменная для вычисления траектории ECI
 public:
+    const double getStartSecondsForEci() { return start_seconds; }
     Engine(std::shared_ptr<Bus> bus, json config) {
         eventBus = bus;
         step = config["info"]["step"];
-        stop_time = getStopTime(config["info"]);
-    }
-
-    std::tm parseTime(const std::string& time_str) {
-        std::tm tm = {};
-        std::istringstream ss(time_str);
-        ss >> std::get_time(&tm, "%Y %m %d %H %M %S");
-        if (ss.fail()) {
-            throw std::runtime_error("Error parsing time: " + time_str);
-        }
-        return tm;
-    }
-
-    double getStopTime(const json& config) {
-        std::string start_time_str = config["start_time"];
-        std::string stop_time_str = config["stop_time"];
-        std::tm start_tm = parseTime(start_time_str);
-        std::tm stop_tm = parseTime(stop_time_str);
-        std::time_t start = std::mktime(&start_tm);
-        std::time_t stop = std::mktime(&stop_tm);
-        return difftime(stop, start);
+        auto& result = getStopTime(config["info"]);
+        stop_time = result.first;
+        start_seconds = result.second;
     }
 
     void run() {
+        auto startSecEvent = std::make_shared<StartSecondsEvent>(start_seconds);
+        eventBus->publish("StartSeconds", startSecEvent);
         double currentTime = start_time; 
         while (currentTime <= stop_time) {
+            std::cout << currentTime << '\n';
             auto newStepData = std::make_shared<NewStepEvent>(currentTime);
             eventBus->publish("NewStep", newStepData);
             eventBus->publish("Calc", nullptr);

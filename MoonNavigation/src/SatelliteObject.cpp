@@ -7,7 +7,7 @@ void SatelliteObject::InitPosition() {
 SatelliteObject::SatelliteObject(const json& config, std::shared_ptr<Bus> bus) {
 	mass = config["mass"];
 	orbital_height = config["orbital_height"];
-	tx_power = config["tx_power"];
+	state.Ptx = config["tx_power"];
 	state.clock.shift = config["clock"]["shift"];
 	state.clock.drift = config["clock"]["drift"];
 	state.clock.instability = config["clock"]["instability"];
@@ -16,6 +16,8 @@ SatelliteObject::SatelliteObject(const json& config, std::shared_ptr<Bus> bus) {
 	std_dev.x = std["x"];
 	std_dev.y = std["y"];
 	std_dev.z = std["z"];
+
+	//start = engine->getStartSecondsForEci();
 
 	//eventBus = bus;
 	//eventBus->subscribe("NewStep", [this](std::shared_ptr<Event> eventData) {
@@ -26,6 +28,11 @@ SatelliteObject::SatelliteObject(const json& config, std::shared_ptr<Bus> bus) {
 	//	}
 	//	});
 }
+
+void SatelliteObject::setStartSeconds(double start_seconds) {
+	start = start_seconds;
+}
+
 
 //void SatelliteObject::Update(std::shared_ptr<NewStepEvent> eventData) {
 //	auto newSatData = std::make_shared<SatelliteEvent>(state);

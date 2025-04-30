@@ -80,9 +80,10 @@ static std::pair<json, std::vector<std::shared_ptr<Object>>> LoadAndCreateObject
     return { config["environment"], objs};
 }
 
-
-
 int main() {
+    //const std::string uri = "ws://194.58.96.141:9072"; // Используй порт WS (9071)
+    //const std::string login = "user2"; // Твой логин
+    //const std::string password = "DwfL~tfY#%1{";
 
     setlocale(LC_ALL, "Russian");
     auto bus = std::make_shared<Bus>();

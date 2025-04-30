@@ -38,3 +38,4 @@ add_executable(MoonNavigation
 
 # Или дополнительные пути для #include:
 target_include_directories(MoonNavigation PRIVATE "${CMAKE_SOURCE_DIR}/include")
+include_directories(${CMAKE_SOURCE_DIR}/include/eigen-3.4.0)

@@ -5,7 +5,22 @@ MediumSatellite::MediumSatellite(const json& config, std::shared_ptr<Bus> bus)
     initOrbitParams();
     posUpdateSimpleOrbital(state.current_time);
     ephUpdate();
+
+    //std::filesystem::path logFilePath = "C:\\cpp_projects\\" + std::to_string(state.id) + ".txt";// "sat_" + std::to_string(state.id) + ".txt";
+    //logFile.open(logFilePath, std::ios::out);
+
+    //if (logFile.is_open()) {
+    //    createLogHeader();
+    //}
     eventBus = bus;
+    eventBus->subscribe("StartSeconds", [this](std::shared_ptr<Event> eventData) {
+        auto startSecEvent = std::dynamic_pointer_cast<StartSecondsEvent>(eventData);
+        if (startSecEvent) {
+            this->setStartSeconds(startSecEvent->start_seconds);
+        }
+        });
+
+
     eventBus->subscribe("NewStep", [this](std::shared_ptr<Event> eventData) {
         //std::cout << "Received event: " << typeid(*eventData).name() << std::endl;
         auto newStepData = std::dynamic_pointer_cast<NewStepEvent>(eventData);
@@ -26,6 +41,7 @@ void MediumSatellite::Update(std::shared_ptr<NewStepEvent> eventData) {
     posUpdateSimpleOrbital(eventData->currentTime);
     ephUpdate();
     state.current_time = eventData->currentTime;
+    //log();
     auto newMedSatData = std::make_shared<SatelliteEvent>(state);
     eventBus->publish("MedSatData", newMedSatData);
 }
@@ -172,18 +188,67 @@ void MediumSatellite::posUpdateSimpleOrbital(double t)
 }
 
 void MediumSatellite::ephUpdate() {
-    double crdsigma = 5.;
     double velosigma = 2;
     double shiftsigma = 1e-10;
     double driftsigma = 1e-12;
-    state.eph.xyz.x = state.ecef.x + normrnd(0, crdsigma);
-    state.eph.xyz.y = state.ecef.y + normrnd(0, crdsigma);
-    state.eph.xyz.z = state.ecef.z + normrnd(0, crdsigma);
+    state.eph.xyz.x = state.ecef.x + normrnd(0, std_dev.x);
+    state.eph.xyz.y = state.ecef.y + normrnd(0, std_dev.y);
+    state.eph.xyz.z = state.ecef.z + normrnd(0, std_dev.z);
     state.eph.vxyz.x = state.velocity.x + normrnd(0, velosigma);
     state.eph.vxyz.y = state.velocity.y + normrnd(0, velosigma);
     state.eph.vxyz.z = state.velocity.z + normrnd(0, velosigma);
     state.eph.clock.shift = state.clock.shift + normrnd(0, shiftsigma);
     state.eph.clock.drift = state.clock.drift + normrnd(0, driftsigma);
+    
+    state.residual.x = state.ecef.x - state.eph.xyz.x;
+    state.residual.y = state.ecef.y - state.eph.xyz.y;
+    state.residual.z = state.ecef.z - state.eph.xyz.z;
 }
 
-
+//void MediumSatellite::createLogHeader() {
+//    if (logFile.is_open()) {
+//        logFile << "t" << " " <<
+//            "x" << " " <<
+//            "y" << " " <<
+//            "z" << " " <<
+//            "vx" << " " <<
+//            "vy" << " " <<
+//            "vz" << " " <<
+//            "shift" << " " <<
+//            "drift" << " " <<
+//            "eph_x" << " " <<
+//            "eph_y" << " " <<
+//            "eph_z" << " " <<
+//            "eph_vx" << " " <<
+//            "eph_vy" << " " <<
+//            "eph_vz" << " " <<
+//            "eph_shift" << " " <<
+//            "eph_drift" << " " <<
+//            std::endl;
+//    }
+//}
+//
+//
+//void MediumSatellite::log() {
+//    if (logFile.is_open()) {
+//        logFile << std::fixed << std::setprecision(16);
+//        logFile << state.current_time << " " <<
+//            state.ecef.x << " " <<
+//            state.ecef.y << " " <<
+//            state.ecef.z << " " <<
+//            state.velocity.z << " " <<
+//            state.velocity.y << " " <<
+//            state.velocity.z << " " <<
+//            state.clock.shift << " " <<
+//            state.clock.drift << " " <<
+//            state.eph.xyz.x << " " <<
+//            state.eph.xyz.y << " " <<
+//            state.eph.xyz.z << " " <<
+//            state.eph.vxyz.z << " " <<
+//            state.eph.vxyz.y << " " <<
+//            state.eph.vxyz.z << " " <<
+//            state.eph.clock.shift << " " <<
+//            state.eph.clock.drift << " " <<
+//            std::endl;
+//    }
+//}

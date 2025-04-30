@@ -4,19 +4,21 @@
 
 #include "ReceiverObject.h"
 
+struct DynRecState : RecState {
+	BLH finish_coords;
+};
+
 class DynamicReceiver : public ReceiverObject {
 private:
-	double speed;
+	DynRecState dyn_state;
 	double course;
-	BLH finish_coords;
-	void LoxodromeStep();
-	void EasyStep();
+	void LoxodromeStep(double dt);
+	//void EasyStep();
 	std::shared_ptr<Bus> eventBus;
-	void Update(std::shared_ptr<NewStepEvent> new_step) override { int a = 5; }
+	void Update(std::shared_ptr<NewStepEvent> new_step) override;
 public:
 	DynamicReceiver(const json& config, std::shared_ptr<Bus> bus);
-	void PrintInfo() const override {
-		std::cout << "dyn rec created" << std::endl;
-	}
+	void Calc() override;
+	void PrintInfo() const override;
 };
 #endif // !DYNAMICRECEIVER_H

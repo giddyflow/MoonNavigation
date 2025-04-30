@@ -1,10 +1,10 @@
 {
     "environment": {
-        "place": "moon",
+        "place": "earth",
         "info": {
             "start_time": "2024 08 20 11 00 00",
-            "stop_time":  "2024 08 20 11 00 40",
-            "step": 10
+            "stop_time":  "2024 08 21 11 00 00",
+            "step": 600
         }
     },
     "objects":{
@@ -17,7 +17,11 @@
                 "suppress_coeff": 20,
                 "mask": 5, 
                 "power_spectral_density": -210,
-                "speed": null, 
+                "speed": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }, 
                 "course": null,
                 "clock": {
                     "shift": 1e-9,
@@ -26,7 +30,7 @@
                 },
                 "start":{
                     "lat": 55.0,
-                    "lon": 0.0,
+                    "lon": 37.0,
                     "h": 300.0 
                 },
                 "end":{
@@ -38,290 +42,495 @@
         },
         {
                 "type": "Static",
-                "info":{
-                    "id": 2,
-                    "snr_treshold": 20,
-                    "suppress_coeff": 20,
-                    "mask": 10, 
-                    "power_spectral_density": -210,
-                    "speed": null, 
-                    "course": null,
-                    "clock": {
-                        "shift": 1e-9,
-                        "drift": 1e-11,
-                        "instability": 1e-8
-                    },
-                    "start":{
-                        "lat": 55.0,
-                        "lon": 0.0,
-                        "h": 300.0 
-                    },
-                    "end":{
-                        "lat": null,
-                        "lon": null,
-                        "h": null
-                    }
-                } 
-        },
-        {
-            "type": "Dynamic", 
-            "info":{
+                "info": {
                 "id": 2,
-                "snr_treshold": 18,
+                "snr_treshold": 20,
                 "suppress_coeff": 20,
-                "mask": 5, 
-                "power_spectral_density": -200,
-                "speed": 20, 
-                "course": 90,
+                "mask": 10,
+                "power_spectral_density": -210,
+                "speed": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "course": null,
                 "clock": {
-                    "shift": 1e-10,
+                    "shift": 1e-9,
                     "drift": 1e-11,
-                    "instability": 1e-13
+                    "instability": 1e-8
                 },
-                "start":{
-                    "lat": 55.0,
-                    "lon": 0.0,
-                    "h": 800.0 
+                "start": {
+                    "lat": 60.0,
+                    "lon": 40.0,
+                    "h": 300.0
                 },
-                "end":{
-                    "lat": 40.0,
-                    "lon": 20.0,
-                    "h": 800.0
+                "end": {
+                    "lat": null,
+                    "lon": null,
+                    "h": null
                 }
-            }
+            } 
         }
     ],
-    "nka":[
-        {
-            "type": "Low",
-            "info":{
-                "id": 1,
-                "tx_power": 30,
-                "orbital_height": 15359,
-                "mass": 1234,
-                "clock": {
-                    "shift": 1e-10,
-                    "drift": 1e-11,
-                    "instability": 1e-13
-                },
-                "std_dev":{
-                    "x": 10,
-                    "y": 20,
-                    "z": 30
+        "nka": [
+            {
+                "type": "Low",
+                "info": {
+                    "id": 1,
+                    "tx_power": 30,
+                    "orbital_height": 15359,
+                    "mass": 1234,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 10,
+                        "y": 20,
+                        "z": 30
+                    }
+                }
+            },
+            {
+                "type": "Geo",
+                "info": {
+                    "id": 1,
+                    "tx_power": 40,
+                    "orbital_height": 35359,
+                    "mass": 1684,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 3,
+                        "y": 3,
+                        "z": 3
+                    }
+                }
+            },
+            {
+                "type": "Medium",
+                "info": {
+                    "id": 1,
+                    "tx_power": 30,
+                    "orbital_height": 19100000,
+                    "mass": 1344,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 30,
+                        "y": 30,
+                        "z": 30
+                    }
+                }
+            },
+            {
+                "type": "Medium",
+                "info": {
+                    "id": 2,
+                    "tx_power": 30,
+                    "orbital_height": 19100000,
+                    "mass": 1344,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 30,
+                        "y": 30,
+                        "z": 30
+                    }
+                }
+            },
+            {
+                "type": "Medium",
+                "info": {
+                    "id": 3,
+                    "tx_power": 30,
+                    "orbital_height": 19100000,
+                    "mass": 1344,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 30,
+                        "y": 30,
+                        "z": 30
+                    }
+                }
+            },
+            {
+                "type": "Medium",
+                "info": {
+                    "id": 4,
+                    "tx_power": 30,
+                    "orbital_height": 19100000,
+                    "mass": 1344,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 30,
+                        "y": 30,
+                        "z": 30
+                    }
+                }
+            },
+            {
+                "type": "Medium",
+                "info": {
+                    "id": 5,
+                    "tx_power": 30,
+                    "orbital_height": 19100000,
+                    "mass": 1344,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 30,
+                        "y": 30,
+                        "z": 30
+                    }
+                }
+            },
+            {
+                "type": "Medium",
+                "info": {
+                    "id": 6,
+                    "tx_power": 30,
+                    "orbital_height": 19100000,
+                    "mass": 1344,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 30,
+                        "y": 30,
+                        "z": 30
+                    }
+                }
+            },
+            {
+                "type": "Medium",
+                "info": {
+                    "id": 7,
+                    "tx_power": 30,
+                    "orbital_height": 19100000,
+                    "mass": 1344,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 30,
+                        "y": 30,
+                        "z": 30
+                    }
+                }
+            },
+            {
+                "type": "Medium",
+                "info": {
+                    "id": 8,
+                    "tx_power": 30,
+                    "orbital_height": 19100000,
+                    "mass": 1344,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 30,
+                        "y": 30,
+                        "z": 30
+                    }
+                }
+            },
+            {
+                "type": "Medium",
+                "info": {
+                    "id": 9,
+                    "tx_power": 30,
+                    "orbital_height": 19100000,
+                    "mass": 1344,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 30,
+                        "y": 30,
+                        "z": 30
+                    }
+                }
+            },
+            {
+                "type": "Medium",
+                "info": {
+                    "id": 10,
+                    "tx_power": 30,
+                    "orbital_height": 19100000,
+                    "mass": 1344,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 30,
+                        "y": 30,
+                        "z": 30
+                    }
+                }
+            },
+            {
+                "type": "Medium",
+                "info": {
+                    "id": 11,
+                    "tx_power": 30,
+                    "orbital_height": 19100000,
+                    "mass": 1344,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 30,
+                        "y": 30,
+                        "z": 30
+                    }
+                }
+            },
+            {
+                "type": "Medium",
+                "info": {
+                    "id": 12,
+                    "tx_power": 30,
+                    "orbital_height": 19100000,
+                    "mass": 1344,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 30,
+                        "y": 30,
+                        "z": 30
+                    }
+                }
+            },
+            {
+                "type": "Medium",
+                "info": {
+                    "id": 13,
+                    "tx_power": 30,
+                    "orbital_height": 19100000,
+                    "mass": 1344,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 30,
+                        "y": 30,
+                        "z": 30
+                    }
+                }
+            },
+            {
+                "type": "Medium",
+                "info": {
+                    "id": 14,
+                    "tx_power": 30,
+                    "orbital_height": 19100000,
+                    "mass": 1344,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 30,
+                        "y": 30,
+                        "z": 30
+                    }
+                }
+            },
+            {
+                "type": "Medium",
+                "info": {
+                    "id": 15,
+                    "tx_power": 30,
+                    "orbital_height": 19100000,
+                    "mass": 1344,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 30,
+                        "y": 30,
+                        "z": 30
+                    }
+                }
+            },
+            {
+                "type": "Medium",
+                "info": {
+                    "id": 16,
+                    "tx_power": 30,
+                    "orbital_height": 19100000,
+                    "mass": 1344,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 30,
+                        "y": 30,
+                        "z": 30
+                    }
+                }
+            },
+            {
+                "type": "Medium",
+                "info": {
+                    "id": 17,
+                    "tx_power": 30,
+                    "orbital_height": 19100000,
+                    "mass": 1344,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 30,
+                        "y": 30,
+                        "z": 30
+                    }
+                }
+            },
+            {
+                "type": "Medium",
+                "info": {
+                    "id": 18,
+                    "tx_power": 30,
+                    "orbital_height": 19100000,
+                    "mass": 1344,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 30,
+                        "y": 30,
+                        "z": 30
+                    }
+                }
+            },
+            {
+                "type": "Medium",
+                "info": {
+                    "id": 19,
+                    "tx_power": 30,
+                    "orbital_height": 19100000,
+                    "mass": 1344,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 30,
+                        "y": 30,
+                        "z": 30
+                    }
+                }
+            },
+            {
+                "type": "Medium",
+                "info": {
+                    "id": 20,
+                    "tx_power": 30,
+                    "orbital_height": 19100000,
+                    "mass": 1344,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 30,
+                        "y": 30,
+                        "z": 30
+                    }
+                }
+            },
+            {
+                "type": "Medium",
+                "info": {
+                    "id": 21,
+                    "tx_power": 30,
+                    "orbital_height": 19100000,
+                    "mass": 1344,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 30,
+                        "y": 30,
+                        "z": 30
+                    }
+                }
+            },
+            {
+                "type": "Medium",
+                "info": {
+                    "id": 22,
+                    "tx_power": 30,
+                    "orbital_height": 19100000,
+                    "mass": 1344,
+                    "clock": {
+                        "shift": 1e-10,
+                        "drift": 1e-11,
+                        "instability": 1e-13
+                    },
+                    "std_dev": {
+                        "x": 30,
+                        "y": 30,
+                        "z": 30
+                    }
                 }
             }
-        },
-        {
-            "type": "Geo",
-            "info":{
-                "id": 1,
-                "tx_power": 40,
-                "orbital_height": 35359,
-                "mass": 1684,
-                "clock": {
-                    "shift": 1e-10,
-                    "drift": 1e-11,
-                    "instability": 1e-13
-                },
-                "std_dev":{
-                    "x": 3,
-                    "y": 3,
-                    "z": 3
-                }
-            }
-        },
-        {
-            "type": "Medium",
-            "info": {
-                "id": 1,
-                "tx_power": 30,
-                "orbital_height": 25359,
-                "mass": 1344,
-                "clock": {
-                    "shift": 1e-10,
-                    "drift": 1e-11,
-                    "instability": 1e-13
-                },
-                "std_dev": {
-                    "x": 3,
-                    "y": 3,
-                    "z": 3
-                }
-            }
-        },
-        {
-            "type": "Medium",
-            "info": {
-                "id": 2,
-                "tx_power": 30,
-                "orbital_height": 25359,
-                "mass": 1344,
-                "clock": {
-                    "shift": 1e-10,
-                    "drift": 1e-11,
-                    "instability": 1e-13
-                },
-                "std_dev": {
-                    "x": 3,
-                    "y": 3,
-                    "z": 3
-                }
-            }
-        },
-        {
-            "type": "Medium",
-            "info": {
-                "id": 3,
-                "tx_power": 30,
-                "orbital_height": 25359,
-                "mass": 1344,
-                "clock": {
-                    "shift": 1e-10,
-                    "drift": 1e-11,
-                    "instability": 1e-13
-                },
-                "std_dev": {
-                    "x": 3,
-                    "y": 3,
-                    "z": 3
-                }
-            }
-        },
-        {
-            "type": "Medium",
-            "info": {
-                "id": 4,
-                "tx_power": 30,
-                "orbital_height": 25359,
-                "mass": 1344,
-                "clock": {
-                    "shift": 1e-10,
-                    "drift": 1e-11,
-                    "instability": 1e-13
-                },
-                "std_dev": {
-                    "x": 3,
-                    "y": 3,
-                    "z": 3
-                }
-            }
-        },
-        {
-            "type": "Medium",
-            "info": {
-                "id": 5,
-                "tx_power": 30,
-                "orbital_height": 25359,
-                "mass": 1344,
-                "clock": {
-                    "shift": 1e-10,
-                    "drift": 1e-11,
-                    "instability": 1e-13
-                },
-                "std_dev": {
-                    "x": 3,
-                    "y": 3,
-                    "z": 3
-                }
-            }
-        },
-        {
-            "type": "Medium",
-            "info": {
-                "id": 6,
-                "tx_power": 30,
-                "orbital_height": 25359,
-                "mass": 1344,
-                "clock": {
-                    "shift": 1e-10,
-                    "drift": 1e-11,
-                    "instability": 1e-13
-                },
-                "std_dev": {
-                    "x": 3,
-                    "y": 3,
-                    "z": 3
-                }
-            }
-        },
-        {
-            "type": "Medium",
-            "info": {
-                "id": 7,
-                "tx_power": 30,
-                "orbital_height": 25359,
-                "mass": 1344,
-                "clock": {
-                    "shift": 1e-10,
-                    "drift": 1e-11,
-                    "instability": 1e-13
-                },
-                "std_dev": {
-                    "x": 3,
-                    "y": 3,
-                    "z": 3
-                }
-            }
-        },
-        {
-            "type": "Medium",
-            "info": {
-                "id": 8,
-                "tx_power": 30,
-                "orbital_height": 25359,
-                "mass": 1344,
-                "clock": {
-                    "shift": 1e-10,
-                    "drift": 1e-11,
-                    "instability": 1e-13
-                },
-                "std_dev": {
-                    "x": 3,
-                    "y": 3,
-                    "z": 3
-                }
-            }
-        },
-        {
-            "type": "Medium",
-            "info": {
-                "id": 9,
-                "tx_power": 30,
-                "orbital_height": 25359,
-                "mass": 1344,
-                "clock": {
-                    "shift": 1e-10,
-                    "drift": 1e-11,
-                    "instability": 1e-13
-                },
-                "std_dev": {
-                    "x": 3,
-                    "y": 3,
-                    "z": 3
-                }
-            }
-        },
-        {
-            "type": "Medium",
-            "info": {
-                "id": 10,
-                "tx_power": 30,
-                "orbital_height": 25359,
-                "mass": 1344,
-                "clock": {
-                    "shift": 1e-10,
-                    "drift": 1e-11,
-                    "instability": 1e-13
-                },
-                "std_dev": {
-                    "x": 3,
-                    "y": 3,
-                    "z": 3
-                }
-            }
-        }
-        
-    ],
+
+        ],
     "interference":[
         {
             "type": "Dynamic",
