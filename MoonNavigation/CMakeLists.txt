@@ -1,41 +1,36 @@
 ﻿cmake_minimum_required(VERSION 3.8)
 project(MoonNavigation LANGUAGES CXX)
 
-# Задаём стандарт C++
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Пути к вашим папкам
-set(HEADER_DIR "${CMAKE_SOURCE_DIR}/MoonNavigation/header")
-set(SRC_DIR    "${CMAKE_SOURCE_DIR}/MoonNavigation/src")
+# Автоматическое определение пути к данным
+set(INPUT_FOLDER "${CMAKE_SOURCE_DIR}/MoonNavigation")
+file(TO_NATIVE_PATH "${INPUT_FOLDER}" NATIVE_INPUT_FOLDER)
 
-# Если хотите добавить в пути и папку include:
-# include_directories("${CMAKE_SOURCE_DIR}/include")
+file(GLOB_RECURSE SOURCES "${CMAKE_SOURCE_DIR}/MoonNavigation/src/*.cpp")
+file(GLOB_RECURSE HEADERS "${CMAKE_SOURCE_DIR}/MoonNavigation/header/*.h*")
 
-# Добавляем директорию с заголовками (где лежат .h/.hpp)
-include_directories(${HEADER_DIR})
+add_executable(MoonNavigation ${SOURCES} ${HEADERS})
 
-# Собираем список исходников (*.cpp) из папки src
-file(GLOB_RECURSE SOURCES
-    "${SRC_DIR}/*.cpp"
+target_include_directories(MoonNavigation PRIVATE
+    "${CMAKE_SOURCE_DIR}/MoonNavigation/header"
+    "${CMAKE_SOURCE_DIR}/include"
+    "${CMAKE_SOURCE_DIR}/include/eigen-3.4.0"
 )
 
-# (Опционально) соберём список заголовочных файлов, чтобы IDE их видела
-file(GLOB_RECURSE HEADERS
-    "${HEADER_DIR}/*.h"
-    "${HEADER_DIR}/*.hpp"
-)
+if(MSVC)
+    target_compile_options(MoonNavigation PRIVATE /W4) 
+    
+    # Автоматическая настройка аргументов для VS
+    set_target_properties(MoonNavigation PROPERTIES
+        VS_DEBUGGER_COMMAND_ARGUMENTS "\"${NATIVE_INPUT_FOLDER}\""
+        VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_BINARY_DIR}"
+    )
+else()
+    target_compile_options(MoonNavigation PRIVATE -Wall -Wextra -Wpedantic)
+endif()
 
-# Создаём исполняемый файл. Заголовки добавляем для удобства IDE,
-# хотя для сборки достаточно только SOURCES.
-add_executable(MoonNavigation
-    ${SOURCES}
-    ${HEADERS}
-)
-
-# Если нужны дополнительные библиотеки - добавьте их здесь:
-# target_link_libraries(MoonNavigation PRIVATE MyLib)
-
-# Или дополнительные пути для #include:
-target_include_directories(MoonNavigation PRIVATE "${CMAKE_SOURCE_DIR}/include")
-include_directories(${CMAKE_SOURCE_DIR}/include/eigen-3.4.0)
+# Дополнительно: вывод информации о путях
+message(STATUS "Input folder path: ${NATIVE_INPUT_FOLDER}")
+message(STATUS "Input file path: ${NATIVE_INPUT_FOLDER}/in.json")

@@ -40,6 +40,139 @@ include CMakeFiles\rules.ninja
 # Logical path to working directory; prefix for absolute paths.
 
 cmake_ninja_workdir = C$:\cpp_projects\MoonNavigation\out\build\x64-Debug\
+# =============================================================================
+# Object build statements for EXECUTABLE target MoonNavigation
+
+
+#############################################
+# Order-only phony target for MoonNavigation
+
+build cmake_object_order_depends_target_MoonNavigation: phony || .
+
+build CMakeFiles\MoonNavigation.dir\MoonNavigation\src\DynamicJam.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\DynamicJam.cpp || cmake_object_order_depends_target_MoonNavigation
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /W4
+  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
+  OBJECT_DIR = CMakeFiles\MoonNavigation.dir
+  OBJECT_FILE_DIR = CMakeFiles\MoonNavigation.dir\MoonNavigation\src
+  TARGET_COMPILE_PDB = CMakeFiles\MoonNavigation.dir\
+  TARGET_PDB = MoonNavigation.pdb
+
+build CMakeFiles\MoonNavigation.dir\MoonNavigation\src\DynamicReceiver.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\DynamicReceiver.cpp || cmake_object_order_depends_target_MoonNavigation
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /W4
+  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
+  OBJECT_DIR = CMakeFiles\MoonNavigation.dir
+  OBJECT_FILE_DIR = CMakeFiles\MoonNavigation.dir\MoonNavigation\src
+  TARGET_COMPILE_PDB = CMakeFiles\MoonNavigation.dir\
+  TARGET_PDB = MoonNavigation.pdb
+
+build CMakeFiles\MoonNavigation.dir\MoonNavigation\src\GeoSatellite.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\GeoSatellite.cpp || cmake_object_order_depends_target_MoonNavigation
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /W4
+  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
+  OBJECT_DIR = CMakeFiles\MoonNavigation.dir
+  OBJECT_FILE_DIR = CMakeFiles\MoonNavigation.dir\MoonNavigation\src
+  TARGET_COMPILE_PDB = CMakeFiles\MoonNavigation.dir\
+  TARGET_PDB = MoonNavigation.pdb
+
+build CMakeFiles\MoonNavigation.dir\MoonNavigation\src\JamObject.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\JamObject.cpp || cmake_object_order_depends_target_MoonNavigation
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /W4
+  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
+  OBJECT_DIR = CMakeFiles\MoonNavigation.dir
+  OBJECT_FILE_DIR = CMakeFiles\MoonNavigation.dir\MoonNavigation\src
+  TARGET_COMPILE_PDB = CMakeFiles\MoonNavigation.dir\
+  TARGET_PDB = MoonNavigation.pdb
+
+build CMakeFiles\MoonNavigation.dir\MoonNavigation\src\LowSatellite.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\LowSatellite.cpp || cmake_object_order_depends_target_MoonNavigation
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /W4
+  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
+  OBJECT_DIR = CMakeFiles\MoonNavigation.dir
+  OBJECT_FILE_DIR = CMakeFiles\MoonNavigation.dir\MoonNavigation\src
+  TARGET_COMPILE_PDB = CMakeFiles\MoonNavigation.dir\
+  TARGET_PDB = MoonNavigation.pdb
+
+build CMakeFiles\MoonNavigation.dir\MoonNavigation\src\MediumSatellite.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\MediumSatellite.cpp || cmake_object_order_depends_target_MoonNavigation
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /W4
+  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
+  OBJECT_DIR = CMakeFiles\MoonNavigation.dir
+  OBJECT_FILE_DIR = CMakeFiles\MoonNavigation.dir\MoonNavigation\src
+  TARGET_COMPILE_PDB = CMakeFiles\MoonNavigation.dir\
+  TARGET_PDB = MoonNavigation.pdb
+
+build CMakeFiles\MoonNavigation.dir\MoonNavigation\src\ModelEnvironment.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\ModelEnvironment.cpp || cmake_object_order_depends_target_MoonNavigation
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /W4
+  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
+  OBJECT_DIR = CMakeFiles\MoonNavigation.dir
+  OBJECT_FILE_DIR = CMakeFiles\MoonNavigation.dir\MoonNavigation\src
+  TARGET_COMPILE_PDB = CMakeFiles\MoonNavigation.dir\
+  TARGET_PDB = MoonNavigation.pdb
+
+build CMakeFiles\MoonNavigation.dir\MoonNavigation\src\MoonNavigation.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\MoonNavigation.cpp || cmake_object_order_depends_target_MoonNavigation
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /W4
+  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
+  OBJECT_DIR = CMakeFiles\MoonNavigation.dir
+  OBJECT_FILE_DIR = CMakeFiles\MoonNavigation.dir\MoonNavigation\src
+  TARGET_COMPILE_PDB = CMakeFiles\MoonNavigation.dir\
+  TARGET_PDB = MoonNavigation.pdb
+
+build CMakeFiles\MoonNavigation.dir\MoonNavigation\src\ReceiverObject.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\ReceiverObject.cpp || cmake_object_order_depends_target_MoonNavigation
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /W4
+  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
+  OBJECT_DIR = CMakeFiles\MoonNavigation.dir
+  OBJECT_FILE_DIR = CMakeFiles\MoonNavigation.dir\MoonNavigation\src
+  TARGET_COMPILE_PDB = CMakeFiles\MoonNavigation.dir\
+  TARGET_PDB = MoonNavigation.pdb
+
+build CMakeFiles\MoonNavigation.dir\MoonNavigation\src\SatelliteObject.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\SatelliteObject.cpp || cmake_object_order_depends_target_MoonNavigation
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /W4
+  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
+  OBJECT_DIR = CMakeFiles\MoonNavigation.dir
+  OBJECT_FILE_DIR = CMakeFiles\MoonNavigation.dir\MoonNavigation\src
+  TARGET_COMPILE_PDB = CMakeFiles\MoonNavigation.dir\
+  TARGET_PDB = MoonNavigation.pdb
+
+build CMakeFiles\MoonNavigation.dir\MoonNavigation\src\Service.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\Service.cpp || cmake_object_order_depends_target_MoonNavigation
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /W4
+  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
+  OBJECT_DIR = CMakeFiles\MoonNavigation.dir
+  OBJECT_FILE_DIR = CMakeFiles\MoonNavigation.dir\MoonNavigation\src
+  TARGET_COMPILE_PDB = CMakeFiles\MoonNavigation.dir\
+  TARGET_PDB = MoonNavigation.pdb
+
+build CMakeFiles\MoonNavigation.dir\MoonNavigation\src\StaticJam.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\StaticJam.cpp || cmake_object_order_depends_target_MoonNavigation
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /W4
+  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
+  OBJECT_DIR = CMakeFiles\MoonNavigation.dir
+  OBJECT_FILE_DIR = CMakeFiles\MoonNavigation.dir\MoonNavigation\src
+  TARGET_COMPILE_PDB = CMakeFiles\MoonNavigation.dir\
+  TARGET_PDB = MoonNavigation.pdb
+
+build CMakeFiles\MoonNavigation.dir\MoonNavigation\src\StaticReceiver.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\StaticReceiver.cpp || cmake_object_order_depends_target_MoonNavigation
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17 /W4
+  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
+  OBJECT_DIR = CMakeFiles\MoonNavigation.dir
+  OBJECT_FILE_DIR = CMakeFiles\MoonNavigation.dir\MoonNavigation\src
+  TARGET_COMPILE_PDB = CMakeFiles\MoonNavigation.dir\
+  TARGET_PDB = MoonNavigation.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target MoonNavigation
+
+
+#############################################
+# Link the executable MoonNavigation.exe
+
+build MoonNavigation.exe: CXX_EXECUTABLE_LINKER__MoonNavigation_Debug CMakeFiles\MoonNavigation.dir\MoonNavigation\src\DynamicJam.cpp.obj CMakeFiles\MoonNavigation.dir\MoonNavigation\src\DynamicReceiver.cpp.obj CMakeFiles\MoonNavigation.dir\MoonNavigation\src\GeoSatellite.cpp.obj CMakeFiles\MoonNavigation.dir\MoonNavigation\src\JamObject.cpp.obj CMakeFiles\MoonNavigation.dir\MoonNavigation\src\LowSatellite.cpp.obj CMakeFiles\MoonNavigation.dir\MoonNavigation\src\MediumSatellite.cpp.obj CMakeFiles\MoonNavigation.dir\MoonNavigation\src\ModelEnvironment.cpp.obj CMakeFiles\MoonNavigation.dir\MoonNavigation\src\MoonNavigation.cpp.obj CMakeFiles\MoonNavigation.dir\MoonNavigation\src\ReceiverObject.cpp.obj CMakeFiles\MoonNavigation.dir\MoonNavigation\src\SatelliteObject.cpp.obj CMakeFiles\MoonNavigation.dir\MoonNavigation\src\Service.cpp.obj CMakeFiles\MoonNavigation.dir\MoonNavigation\src\StaticJam.cpp.obj CMakeFiles\MoonNavigation.dir\MoonNavigation\src\StaticReceiver.cpp.obj
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = CMakeFiles\MoonNavigation.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\MoonNavigation.dir\
+  TARGET_FILE = MoonNavigation.exe
+  TARGET_IMPLIB = MoonNavigation.lib
+  TARGET_PDB = MoonNavigation.pdb
+
 
 #############################################
 # Utility command for edit_cache
@@ -64,172 +197,9 @@ build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
 build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 
 # =============================================================================
-# Write statements declared in CMakeLists.txt:
-# C:/cpp_projects/MoonNavigation/CMakeLists.txt
-# =============================================================================
-
-# =============================================================================
-# Object build statements for EXECUTABLE target MoonNavigation
-
-
-#############################################
-# Order-only phony target for MoonNavigation
-
-build cmake_object_order_depends_target_MoonNavigation: phony || .
-
-build MoonNavigation\CMakeFiles\MoonNavigation.dir\src\DynamicJam.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\DynamicJam.cpp || cmake_object_order_depends_target_MoonNavigation
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
-  OBJECT_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir
-  OBJECT_FILE_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir\src
-  TARGET_COMPILE_PDB = MoonNavigation\CMakeFiles\MoonNavigation.dir\
-  TARGET_PDB = MoonNavigation\MoonNavigation.pdb
-
-build MoonNavigation\CMakeFiles\MoonNavigation.dir\src\DynamicReceiver.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\DynamicReceiver.cpp || cmake_object_order_depends_target_MoonNavigation
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
-  OBJECT_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir
-  OBJECT_FILE_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir\src
-  TARGET_COMPILE_PDB = MoonNavigation\CMakeFiles\MoonNavigation.dir\
-  TARGET_PDB = MoonNavigation\MoonNavigation.pdb
-
-build MoonNavigation\CMakeFiles\MoonNavigation.dir\src\GeoSatellite.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\GeoSatellite.cpp || cmake_object_order_depends_target_MoonNavigation
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
-  OBJECT_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir
-  OBJECT_FILE_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir\src
-  TARGET_COMPILE_PDB = MoonNavigation\CMakeFiles\MoonNavigation.dir\
-  TARGET_PDB = MoonNavigation\MoonNavigation.pdb
-
-build MoonNavigation\CMakeFiles\MoonNavigation.dir\src\JamObject.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\JamObject.cpp || cmake_object_order_depends_target_MoonNavigation
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
-  OBJECT_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir
-  OBJECT_FILE_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir\src
-  TARGET_COMPILE_PDB = MoonNavigation\CMakeFiles\MoonNavigation.dir\
-  TARGET_PDB = MoonNavigation\MoonNavigation.pdb
-
-build MoonNavigation\CMakeFiles\MoonNavigation.dir\src\LowSatellite.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\LowSatellite.cpp || cmake_object_order_depends_target_MoonNavigation
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
-  OBJECT_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir
-  OBJECT_FILE_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir\src
-  TARGET_COMPILE_PDB = MoonNavigation\CMakeFiles\MoonNavigation.dir\
-  TARGET_PDB = MoonNavigation\MoonNavigation.pdb
-
-build MoonNavigation\CMakeFiles\MoonNavigation.dir\src\MediumSatellite.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\MediumSatellite.cpp || cmake_object_order_depends_target_MoonNavigation
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
-  OBJECT_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir
-  OBJECT_FILE_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir\src
-  TARGET_COMPILE_PDB = MoonNavigation\CMakeFiles\MoonNavigation.dir\
-  TARGET_PDB = MoonNavigation\MoonNavigation.pdb
-
-build MoonNavigation\CMakeFiles\MoonNavigation.dir\src\ModelEnvironment.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\ModelEnvironment.cpp || cmake_object_order_depends_target_MoonNavigation
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
-  OBJECT_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir
-  OBJECT_FILE_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir\src
-  TARGET_COMPILE_PDB = MoonNavigation\CMakeFiles\MoonNavigation.dir\
-  TARGET_PDB = MoonNavigation\MoonNavigation.pdb
-
-build MoonNavigation\CMakeFiles\MoonNavigation.dir\src\MoonNavigation.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\MoonNavigation.cpp || cmake_object_order_depends_target_MoonNavigation
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
-  OBJECT_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir
-  OBJECT_FILE_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir\src
-  TARGET_COMPILE_PDB = MoonNavigation\CMakeFiles\MoonNavigation.dir\
-  TARGET_PDB = MoonNavigation\MoonNavigation.pdb
-
-build MoonNavigation\CMakeFiles\MoonNavigation.dir\src\ReceiverObject.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\ReceiverObject.cpp || cmake_object_order_depends_target_MoonNavigation
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
-  OBJECT_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir
-  OBJECT_FILE_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir\src
-  TARGET_COMPILE_PDB = MoonNavigation\CMakeFiles\MoonNavigation.dir\
-  TARGET_PDB = MoonNavigation\MoonNavigation.pdb
-
-build MoonNavigation\CMakeFiles\MoonNavigation.dir\src\SatelliteObject.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\SatelliteObject.cpp || cmake_object_order_depends_target_MoonNavigation
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
-  OBJECT_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir
-  OBJECT_FILE_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir\src
-  TARGET_COMPILE_PDB = MoonNavigation\CMakeFiles\MoonNavigation.dir\
-  TARGET_PDB = MoonNavigation\MoonNavigation.pdb
-
-build MoonNavigation\CMakeFiles\MoonNavigation.dir\src\Service.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\Service.cpp || cmake_object_order_depends_target_MoonNavigation
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
-  OBJECT_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir
-  OBJECT_FILE_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir\src
-  TARGET_COMPILE_PDB = MoonNavigation\CMakeFiles\MoonNavigation.dir\
-  TARGET_PDB = MoonNavigation\MoonNavigation.pdb
-
-build MoonNavigation\CMakeFiles\MoonNavigation.dir\src\StaticJam.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\StaticJam.cpp || cmake_object_order_depends_target_MoonNavigation
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
-  OBJECT_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir
-  OBJECT_FILE_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir\src
-  TARGET_COMPILE_PDB = MoonNavigation\CMakeFiles\MoonNavigation.dir\
-  TARGET_PDB = MoonNavigation\MoonNavigation.pdb
-
-build MoonNavigation\CMakeFiles\MoonNavigation.dir\src\StaticReceiver.cpp.obj: CXX_COMPILER__MoonNavigation_unscanned_Debug C$:\cpp_projects\MoonNavigation\MoonNavigation\src\StaticReceiver.cpp || cmake_object_order_depends_target_MoonNavigation
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -IC:\cpp_projects\MoonNavigation\MoonNavigation\header -IC:\cpp_projects\MoonNavigation\include -IC:\cpp_projects\MoonNavigation\include\eigen-3.4.0
-  OBJECT_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir
-  OBJECT_FILE_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir\src
-  TARGET_COMPILE_PDB = MoonNavigation\CMakeFiles\MoonNavigation.dir\
-  TARGET_PDB = MoonNavigation\MoonNavigation.pdb
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target MoonNavigation
-
-
-#############################################
-# Link the executable MoonNavigation\MoonNavigation.exe
-
-build MoonNavigation\MoonNavigation.exe: CXX_EXECUTABLE_LINKER__MoonNavigation_Debug MoonNavigation\CMakeFiles\MoonNavigation.dir\src\DynamicJam.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\DynamicReceiver.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\GeoSatellite.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\JamObject.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\LowSatellite.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\MediumSatellite.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\ModelEnvironment.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\MoonNavigation.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\ReceiverObject.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\SatelliteObject.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\Service.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\StaticJam.cpp.obj MoonNavigation\CMakeFiles\MoonNavigation.dir\src\StaticReceiver.cpp.obj
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
-  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
-  OBJECT_DIR = MoonNavigation\CMakeFiles\MoonNavigation.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_COMPILE_PDB = MoonNavigation\CMakeFiles\MoonNavigation.dir\
-  TARGET_FILE = MoonNavigation\MoonNavigation.exe
-  TARGET_IMPLIB = MoonNavigation\MoonNavigation.lib
-  TARGET_PDB = MoonNavigation\MoonNavigation.pdb
-
-
-#############################################
-# Utility command for edit_cache
-
-build MoonNavigation\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\cpp_projects\MoonNavigation\out\build\x64-Debug\MoonNavigation && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
-  DESC = No interactive CMake dialog available...
-  restat = 1
-
-build MoonNavigation\edit_cache: phony MoonNavigation\CMakeFiles\edit_cache.util
-
-
-#############################################
-# Utility command for rebuild_cache
-
-build MoonNavigation\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\cpp_projects\MoonNavigation\out\build\x64-Debug\MoonNavigation && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\cpp_projects\MoonNavigation -BC:\cpp_projects\MoonNavigation\out\build\x64-Debug"
-  DESC = Running CMake to regenerate build system...
-  pool = console
-  restat = 1
-
-build MoonNavigation\rebuild_cache: phony MoonNavigation\CMakeFiles\rebuild_cache.util
-
-# =============================================================================
 # Target aliases.
 
-build MoonNavigation: phony MoonNavigation\MoonNavigation.exe
-
-build MoonNavigation.exe: phony MoonNavigation\MoonNavigation.exe
+build MoonNavigation: phony MoonNavigation.exe
 
 # =============================================================================
 # Folder targets.
@@ -239,14 +209,7 @@ build MoonNavigation.exe: phony MoonNavigation\MoonNavigation.exe
 #############################################
 # Folder: C:/cpp_projects/MoonNavigation/out/build/x64-Debug
 
-build all: phony MoonNavigation\all
-
-# =============================================================================
-
-#############################################
-# Folder: C:/cpp_projects/MoonNavigation/out/build/x64-Debug/MoonNavigation
-
-build MoonNavigation\all: phony MoonNavigation\MoonNavigation.exe
+build all: phony MoonNavigation.exe
 
 # =============================================================================
 # Built-in targets
@@ -255,14 +218,14 @@ build MoonNavigation\all: phony MoonNavigation\MoonNavigation.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake C$:\cpp_projects\MoonNavigation\CMakeLists.txt C$:\cpp_projects\MoonNavigation\MoonNavigation\CMakeLists.txt CMakeCache.txt CMakeFiles\3.29.5-msvc4\CMakeCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeCXXCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeRCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake C$:\cpp_projects\MoonNavigation\CMakeLists.txt CMakeCache.txt CMakeFiles\3.29.5-msvc4\CMakeCXXCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeRCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake C$:\cpp_projects\MoonNavigation\CMakeLists.txt C$:\cpp_projects\MoonNavigation\MoonNavigation\CMakeLists.txt CMakeCache.txt CMakeFiles\3.29.5-msvc4\CMakeCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeCXXCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeRCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeSystem.cmake: phony
+build C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake C$:\cpp_projects\MoonNavigation\CMakeLists.txt CMakeCache.txt CMakeFiles\3.29.5-msvc4\CMakeCXXCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeRCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeSystem.cmake: phony
 
 
 #############################################

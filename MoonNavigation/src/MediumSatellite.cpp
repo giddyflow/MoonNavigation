@@ -3,23 +3,19 @@
 MediumSatellite::MediumSatellite(const json& config, std::shared_ptr<Bus> bus)
     : SatelliteObject(config, bus) {
     initOrbitParams();
-    posUpdateSimpleOrbital(state.current_time);
-    ephUpdate();
-
-    //std::filesystem::path logFilePath = "C:\\cpp_projects\\" + std::to_string(state.id) + ".txt";// "sat_" + std::to_string(state.id) + ".txt";
-    //logFile.open(logFilePath, std::ios::out);
-
-    //if (logFile.is_open()) {
-    //    createLogHeader();
-    //}
+    //posUpdateSimpleOrbital(state.current_time);
+    //ephUpdate();
+    addId();
+    addMetrics();
+    
     eventBus = bus;
     eventBus->subscribe("StartSeconds", [this](std::shared_ptr<Event> eventData) {
         auto startSecEvent = std::dynamic_pointer_cast<StartSecondsEvent>(eventData);
         if (startSecEvent) {
             this->setStartSeconds(startSecEvent->start_seconds);
+            state.eci = ECEFtoECI(state.ecef, state.current_time, start_seconds);
         }
         });
-
 
     eventBus->subscribe("NewStep", [this](std::shared_ptr<Event> eventData) {
         //std::cout << "Received event: " << typeid(*eventData).name() << std::endl;
@@ -31,19 +27,40 @@ MediumSatellite::MediumSatellite(const json& config, std::shared_ptr<Bus> bus)
     //eventBus->subscribe("NewStep", [this](std::shared_ptr<Event> eventData) {
     //    auto newStepData = std::dynamic_pointer_cast<NewStepEvent>(eventData);
     //    if (newStepData) {
-    //        this->Update(newStepData);  // Обновляем объект с текущим временем
+    //        this->Update(newStepData);  // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     //    }
     //    });
 
 }
 
+
+
+// void MediumSatellite::addEstimatedCoords() {
+//     json coords_est;
+//     coords_est["coords"]["x"] = state.eph.xyz.x;
+//     coords_est["coords"]["y"] = state.eph.xyz.y;
+//     coords_est["coords"]["z"] = state.eph.xyz.z;
+//     coords_est["timestep"] = state.current_time;
+
+//     std::string nka_key = "nka_" + std::to_string(state.id);
+//     full_sat_json_data["data"][nka_key]["coords_est"].push_back(coords_est);
+// }
+
 void MediumSatellite::Update(std::shared_ptr<NewStepEvent> eventData) {
+    if (eventData->currentTime == 3600){
+        std::cout << "START OF THE LOG\n";
+        std::cout << full_sat_json_data.dump(4) << '\n';
+    }
     posUpdateSimpleOrbital(eventData->currentTime);
     ephUpdate();
     state.current_time = eventData->currentTime;
     //log();
     auto newMedSatData = std::make_shared<SatelliteEvent>(state);
     eventBus->publish("MedSatData", newMedSatData);
+    addCoordsDifference();
+    addPower();
+    addEstimatedCoords();
+    addModelCoords();
 }
 
 void MediumSatellite::initOrbitParams() {

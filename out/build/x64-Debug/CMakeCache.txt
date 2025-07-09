@@ -196,13 +196,13 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-MoonNavigation_BINARY_DIR:STATIC=C:/cpp_projects/MoonNavigation/out/build/x64-Debug/MoonNavigation
+MoonNavigation_BINARY_DIR:STATIC=C:/cpp_projects/MoonNavigation/out/build/x64-Debug
 
 //Value Computed by CMake
-MoonNavigation_IS_TOP_LEVEL:STATIC=OFF
+MoonNavigation_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-MoonNavigation_SOURCE_DIR:STATIC=C:/cpp_projects/MoonNavigation/MoonNavigation
+MoonNavigation_SOURCE_DIR:STATIC=C:/cpp_projects/MoonNavigation
 
 
 ########################
@@ -295,7 +295,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MT
 CMAKE_MT-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //noop for ranlib

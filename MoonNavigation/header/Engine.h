@@ -53,13 +53,13 @@ private:
     double start_time = 0;
     double step;
     double stop_time;
-    double start_seconds; // переменная для вычисления траектории ECI
+    double start_seconds; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ ECI
 public:
-    const double getStartSecondsForEci() { return start_seconds; }
+    double getStartSecondsForEci() { return start_seconds; }
     Engine(std::shared_ptr<Bus> bus, json config) {
         eventBus = bus;
-        step = config["info"]["step"];
-        auto& result = getStopTime(config["info"]);
+        step = config["period"];
+        const auto& result = getStopTime(config);
         stop_time = result.first;
         start_seconds = result.second;
     }

@@ -1,12 +1,12 @@
 #include "DynamicReceiver.h"
 
 DynamicReceiver::DynamicReceiver(const json& config, std::shared_ptr<Bus> bus) : ReceiverObject(config, bus){
-	course = config["course"];
+	course = config["azimuth"];
     auto& speed = config["velocity"];
     dyn_state.velocity.x = speed["x"];
     dyn_state.velocity.y = speed["y"];
     dyn_state.velocity.z = speed["z"];
-	auto& end = config["end"];
+	auto& end = config["finish_coords"];
 	dyn_state.finish_coords.lat = end["lat"];
     dyn_state.finish_coords.lon = end["lon"];
     dyn_state.finish_coords.h = end["h"];
@@ -37,6 +37,11 @@ void DynamicReceiver::Update(std::shared_ptr<NewStepEvent> new_step) {
     state.clock = markovModelOrder1(state.clock, new_step->currentTime - state.current_time, clock_instability);
     LoxodromeStep(new_step->currentTime - state.current_time);
     state.current_time = new_step->currentTime;
+    void addId();
+	void addMetrics();
+	void addCoordsDifference();
+	void addModelCoords();
+	void addEstimatedCoords();
 }
 
 void DynamicReceiver::Calc() {
@@ -49,10 +54,10 @@ void DynamicReceiver::Calc() {
 
 void DynamicReceiver::LoxodromeStep(double dt) {
     double theta, q, distance, step, ratio;
-    double lat_step = state.blh.lat * M_PI / 180; // градусы -> радианы
-    double lon_step = state.blh.lon * M_PI / 180; // градусы -> радианы
-    double lat_finish = dyn_state.finish_coords.lat * M_PI / 180; // градусы -> радианы
-    double lon_finish = dyn_state.finish_coords.lon * M_PI / 180; // градусы -> радианы
+    double lat_step = state.blh.lat * M_PI / 180; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ -> пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    double lon_step = state.blh.lon * M_PI / 180; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ -> пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    double lat_finish = dyn_state.finish_coords.lat * M_PI / 180; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ -> пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    double lon_finish = dyn_state.finish_coords.lon * M_PI / 180; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ -> пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     double dLon = lon_finish - lon_step;
     double delta_psi = std::log(std::tan(M_PI / 4 + lat_finish / 2) / std::tan(M_PI / 4 + lat_step / 2));
 

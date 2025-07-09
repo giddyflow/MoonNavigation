@@ -26,6 +26,7 @@ namespace EarthConstants {
 	constexpr double c = 299792458;
 	constexpr double f = 1 / 298.25784;
 	constexpr double e2 = f * (2 - f);
+	constexpr double sec_in_rad = M_PI / 43200;
 }
 
 struct Clock {
@@ -117,6 +118,7 @@ XYZ BLH2ECEF(BLH blh);
 XYZ BLH2ENU(BLH blh_ref, BLH blh);
 XYZ ECEF2ENU(XYZ xyz_ref, XYZ xyz_post);
 XYZ ENU2ECEF(BLH blh_ref, XYZ enu);
+XYZ ECEFtoECI(XYZ xyz_ecef, const double S0, const double ti);
 BLH ECEF2BLH(XYZ ecef);
 
 Clock markovModelOrder1(Clock clock, double dt, double instability);

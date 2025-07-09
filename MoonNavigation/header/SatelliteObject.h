@@ -30,7 +30,7 @@ class SatelliteObject : public Object {
 protected:
 	SatState state;
 	double inclination;
-	double start;
+	double start_seconds;
 	double orbital_height;        // m
 	XYZ std_dev;                  // m m m
 	double mass;                  // kg
@@ -38,8 +38,18 @@ protected:
 	int count = 0;
 	double theta0, OMEGA;
 	void InitPosition();
-	json data = {};
+	std::string nka_key = "";
+	std::string nka_data_key = "data_" + nka_key;
+	json full_sat_json_data = {};
+	json full_sat_json_data_eci = {};
 	std::shared_ptr<Bus> eventBus;
+
+	void addId();
+	void addCoordsDifference();
+	void addPower();
+	void addEstimatedCoords();
+	void addMetrics();
+	void addModelCoords();
 	//void Update(std::shared_ptr<NewStepEvent> eventData) override;
 public:
 	void setStartSeconds(double start_seconds);

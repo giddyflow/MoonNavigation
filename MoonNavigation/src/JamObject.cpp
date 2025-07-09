@@ -1,8 +1,9 @@
 #include "JamObject.h"
 
 JamObject::JamObject(const json& config, std::shared_ptr<Bus> bus) {
-	tx_power = config["tx_power"];
-	auto& start = config["start"];
+	state.id = config["id"];
+	tx_power = config["power"];
+	auto& start = config["coords"];
 	state.blh.lat = start["lat"];
 	state.blh.lon = start["lon"];
 	state.blh.h = start["h"];

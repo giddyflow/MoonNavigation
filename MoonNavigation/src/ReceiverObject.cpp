@@ -1,38 +1,49 @@
 #include "ReceiverObject.h"
 
 ReceiverObject::ReceiverObject(const json& config, std::shared_ptr<Bus> bus) {
-	state.current_time = 0;
-	suppress_coeff = config["suppress_coeff"];
+	//state.current_time = 0;
+	suppress_coeff = config["suppression_coeff"];
 	mask = config["mask"];
 	snr_treshold = config["snr_treshold"];
-	power_spectral_density = config["power_spectral_density"];
+	power_spectral_density = config["PSD"];
 	state.id = config["id"];
 
-	auto& speed = config["speed"];
-	state.velocity.x = speed["x"];
-	state.velocity.y = speed["y"];
-	state.velocity.z = speed["z"];
+	//auto& speed = config["velocity"];
+	//state.velocity.x = speed["x"];
+	//state.velocity.y = speed["y"];
+	//state.velocity.z = speed["z"];
 
-	auto& start = config["start"];
+	auto& start = config["start_coords"];
 	state.blh.lat = start["lat"];
 	state.blh.lon = start["lon"];
 	state.blh.h = start["h"];
 	auto& clock = config["clock"];
 	state.clock.drift = clock["drift"];
 	state.clock.shift = clock["shift"];
-	clock_instability = 1e-8;
+	clock_instability = clock["instability"];
 
 	state.ecef = BLH2ECEF(state.blh);
 
 	sats.clear();
 	jams.clear();
 
-	std::filesystem::path logFilePath = "C:\\cpp_projects\\" + std::to_string(state.id) + ".txt";// "sat_" + std::to_string(state.id) + ".txt";
-	logFile.open(logFilePath, std::ios::out);
+	nap_key = "nap_" + std::to_string(state.id);
+	nap_data_key = "data_" + nap_key;
 
-	if (logFile.is_open()) {
-		createLogHeader();
-	}
+	full_nap_json_data[nap_data_key] = json::object();
+	full_nap_json_data[nap_data_key][nap_key] = json::object();
+	full_nap_json_data[nap_data_key][nap_key]["dif"] = json::array();
+	full_nap_json_data[nap_data_key][nap_key]["xyz_est_coords"] = json::array();
+	full_nap_json_data[nap_data_key][nap_key]["xyz_model_coords"] = json::array();
+	full_nap_json_data[nap_data_key][nap_key]["blh_est_coords"] = json::array();
+	full_nap_json_data[nap_data_key][nap_key]["blh_model_coords"] = json::array();
+
+	// std::filesystem::path logFilePath = "C:\\cpp_projects\\" + std::to_string(state.id) + ".txt";// "sat_" + std::to_string(state.id) + ".txt";
+	// logFile.open(logFilePath, std::ios::out);
+
+	// if (logFile.is_open()) {
+	// 	createLogHeader();
+	// }
 
 	//eventBus->subscribe("NewStep", [this](std::shared_ptr<Event> eventData) {
 	//	//std::cout << "Received event: " << typeid(*eventData).name() << std::endl;
@@ -188,71 +199,142 @@ std::tuple<std::vector<double>, std::vector<XYZ>, std::vector<XYZ>> ReceiverObje
 	return { pseudorange, satpos, Vsat };
 }
 
-void ReceiverObject::createLogHeader() {
-	if (logFile.is_open()) {
-		logFile << "t" << " " <<
-			"x " << " " <<
-			"y " << " " <<
-			"z " << " " <<
-			"shift " << " " <<
-			"drift " << " " <<
-			"est_flag " << " " <<
-			"x_est " << " " <<
-			"y_est " << " " <<
-			"z_est " << " " <<
-			"clock_est " << " " <<
-			"XDOP " << " " <<
-			"YDOP " << " " <<
-			"VDOP " << " " <<
-			"TDOP " << " " <<
-			"Vx_est " << " " <<
-			"Vy_est " << " " <<
-			"Vz_est " << " " <<
-			"Vx " << " " <<
-			"Vy " << " " <<
-			"Vz " << " " <<
-			"estDrift " << " " <<
 
-			std::endl;
-	}
+
+void ReceiverObject::addId() {
+    full_nap_json_data[nap_data_key][nap_key]["id"] = state.id;
+}
+
+void ReceiverObject::addMetrics() {
+    json metrics_entry;
+    metrics_entry["time_metrics"] = "секунды"; 
+    metrics_entry["dif_metrics"] = "метры";
+    metrics_entry["power_metrics"] = "дБВт";
+
+    metrics_entry["coords_est_metrics"] = "метры"; 
+    metrics_entry["coords_model_metrics"] = "метры";
+    metrics_entry["blh_coords_est_metrics"] = "метры";
+
+    metrics_entry["blh_coords_est_metrics_h"] = "метры"; 
+    metrics_entry["blh_coords_model_metrics"] = "градусы";
+    metrics_entry["blh_coords_model_metrics_h"] = "метры";
+
+    full_nap_json_data[nap_data_key][nap_key]["metrics"] = metrics_entry;
+}
+
+void ReceiverObject::addCoordsDifference() {
+    json dif_entry;
+    dif_entry["dif"]["dif_x"] = state.ecef.x - state.est_ecef.x;
+    dif_entry["dif"]["dif_y"] = state.ecef.y - state.est_ecef.y;
+    dif_entry["dif"]["dif_z"] = state.ecef.z - state.est_ecef.z;
+    dif_entry["timestep"] = state.current_time;
+    
+    full_nap_json_data[nap_data_key][nap_key]["dif"].push_back(dif_entry);
 }
 
 
-void ReceiverObject::log() {
-	if (logFile.is_open()) {
-		logFile << std::fixed << std::setprecision(16);
-		logFile << state.current_time << " " <<
-			state.ecef.x << " " <<
-			state.ecef.y << " " <<
-			state.ecef.z << " " <<
-			state.clock.shift << " " <<
-			state.clock.drift << " " <<
-			state.est << " " <<
-			state.est_ecef.x << " " <<
-			state.est_ecef.y << " " <<
-			state.est_ecef.z << " " <<
-			state.est_clock << " " <<
-			state.dop.XDOP << " " <<
-			state.dop.YDOP << " " <<
-			state.dop.VDOP << " " <<
-			state.dop.TDOP << " " <<
-			state.est_velocity.x << " " <<
-			state.est_velocity.y << " " <<
-			state.est_velocity.z << " " <<
-			state.velocity.x << " " <<
-			state.velocity.y << " " <<
-			state.velocity.z << " " <<
-			state.est_drift << " ";
-		for (auto& sat : visible_sats) {
-			logFile << sat.id << " " <<
-				sat.visible << " " <<
-				sat.Prx << " " <<
-				sat.q << " ";
-		}
+void ReceiverObject::addModelCoords() {
+    json entry_model_coords_blh;
+    BLH coords_ecef_to_blh = ECEF2BLH(state.ecef);
+    entry_model_coords_blh["coords"]["lat"] = coords_ecef_to_blh.lat;
+    entry_model_coords_blh["coords"]["lon"] = coords_ecef_to_blh.lon;
+    entry_model_coords_blh["coords"]["h"] = coords_ecef_to_blh.h;
 
-		logFile << std::endl;
-	}
+    json entry_model_coords_ecef;
+    entry_model_coords_ecef["coords"]["x"] = state.ecef.x;
+    entry_model_coords_ecef["coords"]["y"] = state.ecef.y;
+    entry_model_coords_ecef["coords"]["z"] = state.ecef.z;
+
+    entry_model_coords_blh["timestep"] = state.current_time;
+    entry_model_coords_ecef["timestep"] = state.current_time;
+
+    full_nap_json_data[nap_data_key][nap_key]["blh_model_coords"].push_back(entry_model_coords_blh);
+    full_nap_json_data[nap_data_key][nap_key]["xyz_model_coords"].push_back(entry_model_coords_ecef);
 }
+
+void ReceiverObject::addEstimatedCoords() {
+    json entry_est_coords_blh;
+    BLH coords_ecef_to_blh = ECEF2BLH(state.est_ecef);
+    entry_est_coords_blh["coords"]["lat"] = coords_ecef_to_blh.lat;
+    entry_est_coords_blh["coords"]["lon"] = coords_ecef_to_blh.lon;
+    entry_est_coords_blh["coords"]["h"] = coords_ecef_to_blh.h;
+    entry_est_coords_blh["timestep"] = state.current_time;
+
+    json entry_est_coords_ecef;
+    entry_est_coords_ecef["coords"]["x"] = state.est_ecef.x;
+    entry_est_coords_ecef["coords"]["y"] = state.est_ecef.y;
+    entry_est_coords_ecef["coords"]["z"] = state.est_ecef.z;
+    entry_est_coords_ecef["timestep"] = state.current_time;
+
+    full_nap_json_data[nap_data_key][nap_key]["blh_est_coords"].push_back(entry_est_coords_blh);
+    full_nap_json_data[nap_data_key][nap_key]["xyz_est_coords"].push_back(entry_est_coords_ecef);
+}
+
+// void ReceiverObject::createLogHeader() {
+// 	if (logFile.is_open()) {
+// 		logFile << "t" << " " <<
+// 			"x " << " " <<
+// 			"y " << " " <<
+// 			"z " << " " <<
+// 			"shift " << " " <<
+// 			"drift " << " " <<
+// 			"est_flag " << " " <<
+// 			"x_est " << " " <<
+// 			"y_est " << " " <<
+// 			"z_est " << " " <<
+// 			"clock_est " << " " <<
+// 			"XDOP " << " " <<
+// 			"YDOP " << " " <<
+// 			"VDOP " << " " <<
+// 			"TDOP " << " " <<
+// 			"Vx_est " << " " <<
+// 			"Vy_est " << " " <<
+// 			"Vz_est " << " " <<
+// 			"Vx " << " " <<
+// 			"Vy " << " " <<
+// 			"Vz " << " " <<
+// 			"estDrift " << " " <<
+
+// 			std::endl;
+// 	}
+// }
+
+
+// void ReceiverObject::log() {
+// 	if (logFile.is_open()) {
+// 		logFile << std::fixed << std::setprecision(16);
+// 		logFile << state.current_time << " " <<
+// 			state.ecef.x << " " <<
+// 			state.ecef.y << " " <<
+// 			state.ecef.z << " " <<
+// 			state.clock.shift << " " <<
+// 			state.clock.drift << " " <<
+// 			state.est << " " <<
+// 			state.est_ecef.x << " " <<
+// 			state.est_ecef.y << " " <<
+// 			state.est_ecef.z << " " <<
+// 			state.est_clock << " " <<
+// 			state.dop.XDOP << " " <<
+// 			state.dop.YDOP << " " <<
+// 			state.dop.VDOP << " " <<
+// 			state.dop.TDOP << " " <<
+// 			state.est_velocity.x << " " <<
+// 			state.est_velocity.y << " " <<
+// 			state.est_velocity.z << " " <<
+// 			state.velocity.x << " " <<
+// 			state.velocity.y << " " <<
+// 			state.velocity.z << " " <<
+// 			state.est_drift << " ";
+// 		for (auto& sat : visible_sats) {
+// 			logFile << sat.id << " " <<
+// 				sat.visible << " " <<
+// 				sat.Prx << " " <<
+// 				sat.q << " ";
+// 		}
+
+// 		logFile << std::endl;
+// 	}
+// }
 
 //void ReceiverObject::Update(std::shared_ptr<NewStepEvent> eventData) override {
 //	auto newRecData = std::make_shared<ReceiverEvent>(state);

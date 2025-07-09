@@ -31,8 +31,8 @@ public:
 
 class ReceiverObject : public Object {
 protected:
-	void createLogHeader();
-	void log();
+	//void createLogHeader();
+	//void log();
 	void getVisibleSats(double jams_power);
 	void CalcPosition();
 	double CalcJamNoise();
@@ -48,11 +48,20 @@ protected:
 	double power_spectral_density = 0;
 	double clock_instability = 1e-7;
 	RecState state;
+	std::string nap_key = "";
+	std::string nap_data_key = "data_" + nap_key;
+	json full_nap_json_data = {};
+	void addId();
+	void addMetrics();
+	void addCoordsDifference();
+	void addModelCoords();
+	void addEstimatedCoords();
+
 	std::shared_ptr<Bus> eventBus;
 	std::vector<SatState> sats;
 	std::vector<VisSat> visible_sats;
 	std::vector<JamState> jams;
-	std::ofstream logFile;
+	//std::ofstream logFile;
 public:
 	ReceiverObject(const json& config, std::shared_ptr<Bus> bus);
 	//void Update(std::shared_ptr<NewStepEvent> eventData) override;

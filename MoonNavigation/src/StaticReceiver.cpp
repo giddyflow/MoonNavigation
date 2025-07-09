@@ -25,13 +25,19 @@ StaticReceiver::StaticReceiver(const json& config, std::shared_ptr<Bus> bus) : R
 
     eventBus->subscribe("Calc", [this](std::shared_ptr<Event> eventData) {
         Calc();
-        log();
+        //log();
         });
+
+    void addId();
+	void addMetrics();
 }
 
 void StaticReceiver::Update(std::shared_ptr<NewStepEvent> new_step) {
     state.clock = markovModelOrder1(state.clock, new_step->currentTime - state.current_time, clock_instability);
     state.current_time = new_step->currentTime;
+	void addCoordsDifference();
+	void addModelCoords();
+	void addEstimatedCoords();
 }
 
 void StaticReceiver::Calc() {

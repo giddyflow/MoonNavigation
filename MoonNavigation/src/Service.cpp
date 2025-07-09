@@ -102,8 +102,8 @@ BLH ECEF2BLH(XYZ ecef) {
 }
 
 XYZ BLH2ENU(BLH blh_ref, BLH blh) {
-    // blh_ref - geo-координаты опорного пункта
-    // blh - исходные geo-координаты
+    // blh_ref - geo-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+    // blh - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ geo-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
     double cosB = cos(deg2rad(blh_ref.lat));
     double sinB = sin(deg2rad(blh_ref.lat));
@@ -127,8 +127,8 @@ XYZ BLH2ENU(BLH blh_ref, BLH blh) {
 }
 
 XYZ ECEF2ENU(XYZ xyz_ref, XYZ xyz_post) {
-    // xyz_ref - geo-координаты опорного пункта
-    // blh - исходные geo-координаты
+    // xyz_ref - geo-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+    // blh - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ geo-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
     BLH blh_ref = ECEF2BLH(xyz_ref);
     BLH blh = ECEF2BLH(xyz_post);
@@ -174,6 +174,17 @@ XYZ ENU2ECEF(BLH blh_ref, XYZ enu)
     output.z = ecef(2, 0) + xyz_ref.z;
     return output;
 
+}
+
+XYZ ECEFtoECI(XYZ ecef, const double S0, const double ti){
+    XYZ eci;
+    double s_zv = S0 * EarthConstants::sec_in_rad + EarthConstants::omega_z * ti;
+    double cos_s = cos(s_zv);
+    double sin_s = sin(s_zv);
+    eci.x = ecef.x * cos_s - ecef.y * sin_s;
+    eci.y = ecef.x * sin_s + ecef.y * cos_s;
+    eci.z = ecef.z;
+    return eci;
 }
 
 ResultRangeMNK mnkRangeCoords(std::vector<double> d, std::vector<XYZ> posts, XYZ X0) {
@@ -514,9 +525,9 @@ VisSat satVisabilityForViewPoint(const XYZ view_point_pos,
     SATenu = BLH2ENU(BLHref, BLHnka);
 
 
-    //Расчет угла возвышения НКА
+    //пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
     elevation = atan2(SATenu.z, sqrt(pow(SATenu.x, 2) + pow(SATenu.y, 2)));
-    //Расчет азимута НКА
+    //пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
     azimuth = atan2(SATenu.y, SATenu.x);
     if (azimuth < 0) {
         azimuth = azimuth + deg2rad(360.);
@@ -530,7 +541,7 @@ VisSat satVisabilityForViewPoint(const XYZ view_point_pos,
     visible = rad2deg(elevation) > mask;
 
     VisSat output;
-    //Проверка угла маски
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
     if (visible)
     {
         Eigen::Vector3d cur_vel;
