@@ -2,7 +2,7 @@
 #ifndef MODELENVIRONMENT_H
 #define MODELENVIRONMENT_H
 
-#include <chrono> // на будущее
+#include <chrono> // пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
 #include <memory>
 #include <ctime>

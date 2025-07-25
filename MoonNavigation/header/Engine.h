@@ -25,9 +25,26 @@ public:
 };
 
 class Object {
+private:
+    static inline int next_anonymous_id = -1;
+
 public:
+    int id;
+
+    explicit Object(const json& config) {
+        if (config.contains("id") && config["id"].is_number()) {
+            this->id = config["id"].get<int>();
+        } else {
+            this->id = next_anonymous_id--;
+        }
+    }
+
     virtual void Update(std::shared_ptr<NewStepEvent> eventData) = 0;
     virtual ~Object() = default;
+
+    // getResults() больше не нужен в этой архитектуре, его можно удалить.
+    // virtual json getResults() const { return json::object(); }
+
     double current_time;
 };
 
@@ -53,7 +70,7 @@ private:
     double start_time = 0;
     double step;
     double stop_time;
-    double start_seconds; // ���������� ��� ���������� ���������� ECI
+    double start_seconds;
 public:
     double getStartSecondsForEci() { return start_seconds; }
     Engine(std::shared_ptr<Bus> bus, json config) {
@@ -75,8 +92,10 @@ public:
             eventBus->publish("Calc", nullptr);
             currentTime += step;
         }
+        std::cout << "Modeling finished. Publishing SaveAllResults event." << std::endl;
+        // <<< ИЗМЕНЕНО: Публикуем общее событие для всех сохранятелей
+        eventBus->publish("SaveAllResults", nullptr);
     }
-
 };
 
 #endif // !ENGINE_H

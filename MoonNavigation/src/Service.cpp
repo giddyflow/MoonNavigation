@@ -524,10 +524,7 @@ VisSat satVisabilityForViewPoint(const XYZ view_point_pos,
     BLHnka = ECEF2BLH(sat_pos);
     SATenu = BLH2ENU(BLHref, BLHnka);
 
-
-    //������ ���� ���������� ���
     elevation = atan2(SATenu.z, sqrt(pow(SATenu.x, 2) + pow(SATenu.y, 2)));
-    //������ ������� ���
     azimuth = atan2(SATenu.y, SATenu.x);
     if (azimuth < 0) {
         azimuth = azimuth + deg2rad(360.);

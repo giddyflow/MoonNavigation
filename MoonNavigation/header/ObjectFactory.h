@@ -17,36 +17,36 @@
 class ObjectFactory {
 public:
     virtual ~ObjectFactory() = default;
-    virtual std::shared_ptr<SatelliteObject> CreateSatellite(const std::string& type, const json& config, std::shared_ptr<Bus> bus) = 0;
-    virtual std::shared_ptr<ReceiverObject> CreateReceiver(const std::string& type, const json& config, std::shared_ptr<Bus> bus) = 0;
-    virtual std::shared_ptr<JamObject> CreateJam(const std::string& type, const json& config, std::shared_ptr<Bus> bus) = 0;
+    virtual std::shared_ptr<SatelliteObject> CreateSatellite(const std::string& type, const json& config, std::shared_ptr<Bus> bus, const std::filesystem::path& output_dir) = 0;
+    virtual std::shared_ptr<ReceiverObject> CreateReceiver(const std::string& type, const json& config, std::shared_ptr<Bus> bus, const std::filesystem::path& output_dir) = 0;
+    virtual std::shared_ptr<JamObject> CreateJam(const std::string& type, const json& config, std::shared_ptr<Bus> bus, const std::filesystem::path& output_dir) = 0;
     //virtual std::shared_ptr<Engine> CreateEngine(const std::string& place, const json& config) = 0;
 };
 
 
 class ConcreteObjectFactory : public ObjectFactory {
 public:
-    std::shared_ptr<SatelliteObject> CreateSatellite(const std::string& type, const json& config, std::shared_ptr<Bus> bus) override {
-        if (type == "Low") return std::make_shared<LowSatellite>(config, bus);
-        if (type == "Geo") return std::make_shared<GeoSatellite>(config, bus);
-        if (type == "Medium") return std::make_shared<MediumSatellite>(config, bus);
+    std::shared_ptr<SatelliteObject> CreateSatellite(const std::string& type, const json& config, std::shared_ptr<Bus> bus, const std::filesystem::path& output_dir) override {
+        if (type == "Low") return std::make_shared<LowSatellite>(config, bus, output_dir);
+        if (type == "Geo") return std::make_shared<GeoSatellite>(config, bus, output_dir);
+        if (type == "Medium") return std::make_shared<MediumSatellite>(config, bus, output_dir);
         return nullptr;
     }
 
-    std::shared_ptr<ReceiverObject> CreateReceiver(const std::string& type, const json& config, std::shared_ptr<Bus> bus) override {
-        if (type == "Static") return std::make_shared<StaticReceiver>(config, bus);
-        if (type == "Dynamic") return std::make_shared<DynamicReceiver>(config, bus);
+    std::shared_ptr<ReceiverObject> CreateReceiver(const std::string& type, const json& config, std::shared_ptr<Bus> bus, const std::filesystem::path& output_dir) override {
+        if (type == "Static") return std::make_shared<StaticReceiver>(config, bus, output_dir);
+        if (type == "Dynamic") return std::make_shared<DynamicReceiver>(config, bus, output_dir);
         return nullptr;
     }
 
-    std::shared_ptr<JamObject> CreateJam(const std::string& type, const json& config, std::shared_ptr<Bus> bus) override {
-        if (type == "Static") return std::make_shared<StaticJam>(config, bus);
-        if (type == "Dynamic") return std::make_shared<DynamicJam>(config, bus);
+    std::shared_ptr<JamObject> CreateJam(const std::string& type, const json& config, std::shared_ptr<Bus> bus, const std::filesystem::path& output_dir) override {
+        if (type == "Static") return std::make_shared<StaticJam>(config, bus, output_dir);
+        if (type == "Dynamic") return std::make_shared<DynamicJam>(config, bus, output_dir);
         return nullptr;
     }
 
     //std::shared_ptr<Engine> CreateEngine(const std::string& place, const json& config) override {
-    //    //надо будет сделать разные методы для луны и земли, сейчас подразумевается земля
+    //    //пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
     //    return std::make_shared<Engine>(config);;
     //}
 };
