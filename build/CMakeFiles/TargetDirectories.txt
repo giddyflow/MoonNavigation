@@ -1,3 +1,0 @@
-C:/cpp_projects/MoonNavigation/build/CMakeFiles/MoonNavigation.dir
-C:/cpp_projects/MoonNavigation/build/CMakeFiles/edit_cache.dir
-C:/cpp_projects/MoonNavigation/build/CMakeFiles/rebuild_cache.dir
