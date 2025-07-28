@@ -1,15 +1,19 @@
 ﻿#include <iostream>
 #include <fstream>
 #include <nlohmann/json.hpp>
-#include <filesystem> // Для работы с путями
+#include <filesystem>
 #include <vector>
 #include <memory>
 
 #include "ObjectFactory.h"
 #include "Engine.h"
+#include "RinexWriter.h" // Если он вам еще нужен
+#include "ResultCollector.h" // <<< 1. ДОБАВЛЯЕМ НОВЫЙ INCLUDE
 
 using json = nlohmann::json;
 
+// Функции ProcessSatellites, ProcessReceivers, ProcessInterference остаются БЕЗ ИЗМЕНЕНИЙ.
+// Они правильно создают объекты и не зависят от логики сохранения.
 static void ProcessSatellites(const json& config, ConcreteObjectFactory& factory, std::vector<std::shared_ptr<Object>>& objs, std::shared_ptr<Bus>& bus, const std::filesystem::path& output_dir) {
     if (config.contains("data") && config["data"].is_array()) {
         for (const auto& sat_data : config["data"]) {
@@ -18,7 +22,6 @@ static void ProcessSatellites(const json& config, ConcreteObjectFactory& factory
                 auto satellite = factory.CreateSatellite(type, sat_data, bus, output_dir);
                 if (satellite) {
                     objs.push_back(satellite);
-                    // satellite->PrintInfo(); // Вывод информации можно оставить для отладки
                 }
             }
         }
@@ -30,7 +33,6 @@ static void ProcessReceivers(const json& config, ConcreteObjectFactory& factory,
         for (const auto& rec_data : config["data"]) {
             if (rec_data.contains("type")) {
                 std::string type = rec_data["type"];
-                // Передаем output_dir в фабрику
                 auto receiver = factory.CreateReceiver(type, rec_data, bus, output_dir);
                 if (receiver) {
                     objs.push_back(receiver);
@@ -48,7 +50,6 @@ static void ProcessInterference(const json& config, ConcreteObjectFactory& facto
                 auto jam = factory.CreateJam(type, jam_data, bus, output_dir);
                 if (jam) {
                     objs.push_back(jam);
-                    // jam->PrintInfo();
                 }
             }
         }
@@ -60,6 +61,7 @@ struct SimulationSetup {
     std::vector<std::shared_ptr<Object>> objects;
 };
 
+// Эта функция также остается БЕЗ ИЗМЕНЕНИЙ.
 static SimulationSetup LoadAndCreateObjects(const std::filesystem::path& folderPath, std::shared_ptr<Bus> bus) {
     std::filesystem::path configFile = folderPath / "in.json";
     std::ifstream file(configFile);
@@ -73,7 +75,6 @@ static SimulationSetup LoadAndCreateObjects(const std::filesystem::path& folderP
     ConcreteObjectFactory factory;
     std::vector<std::shared_ptr<Object>> objs;
 
-    // Передаем folderPath как путь для вывода
     if (config.contains("nap")) {
         ProcessReceivers(config["nap"], factory, objs, bus, folderPath);
     }
@@ -107,12 +108,14 @@ int main(int argc, char* argv[]) {
 
     try {
         auto bus = std::make_shared<Bus>();
+
+        ResultCollector collector(bus, folderPath);
+
         SimulationSetup setup = LoadAndCreateObjects(folderPath, bus);
-        
-        std::cout << "Объекты симуляции успешно созданы. Всего объектов: " << setup.objects.size() << "\n";
-        
-        Engine engine(bus, setup.engine_config);
+
         RinexWriter rinex(bus, setup.engine_config);
+
+        Engine engine(bus, setup.engine_config);
         engine.run();
 
     } catch (const std::exception& e) {

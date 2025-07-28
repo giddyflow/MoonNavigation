@@ -1,7 +1,5 @@
 #pragma once
 #define _USE_MATH_DEFINES 
-#ifndef SERVICE_H
-#define SERVICE_H
 
 #include <fstream>
 #include <iostream> 
@@ -146,6 +144,3 @@ VisSat satVisabilityForViewPoint(const XYZ view_point_pos,
 std::tm parseTime(const std::string& time_str);
 std::pair<double, double> getStopTime(const json& config);
 double secondsFromStartOfDay(const std::tm& time);
-
-
-#endif // !SERVICE_H

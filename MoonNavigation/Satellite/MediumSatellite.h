@@ -1,6 +1,4 @@
 #pragma once
-#ifndef MEDIUMSATELLITE_H
-#define MEDIUMSATELLITE_H
 
 #include "SatelliteObject.h"
 
@@ -13,7 +11,6 @@ public:
 	void initOrbitParams();
 	void posUpdateSimpleOrbital(double t);
 	void ephUpdate();
-	void initializeJsonEntry();
 	//void log();
 	//void createLogHeader();
 	void Update(std::shared_ptr<NewStepEvent> eventData) override;
@@ -21,4 +18,3 @@ public:
 		std::cout << "medium Satellite created with id " << state.id << '\n';
 	}
 };
-#endif // !MEDIUMSATELLITE_H

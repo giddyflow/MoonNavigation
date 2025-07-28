@@ -1,4 +1,4 @@
-﻿cmake_minimum_required(VERSION 3.8)
+﻿cmake_minimum_required(VERSION 3.16)
 project(MoonNavigation LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -15,9 +15,6 @@ target_include_directories(nlohmann_json INTERFACE
     "include"
 )
 
-# --- Шаг 2: Настраиваем наш основной исполняемый файл ---
-
-# Пути должны начинаться с "MoonNavigation/", так как они лежат в подпапке
 set(SOURCES
     # Основные файлы
     "MoonNavigation/src/main.cpp"
@@ -42,37 +39,13 @@ set(SOURCES
 
     # Модуль RINEX
     "MoonNavigation/RinexWriter/RinexWriter.cpp"
+
+    "MoonNavigation/ResultCollector/ResultCollector.cpp"
 )
 
-set(HEADERS
-    # Основные заголовки
-    "MoonNavigation/header/Engine.h"
-    "MoonNavigation/header/ObjectFactory.h"
-    "MoonNavigation/header/Service.h"
-    "MoonNavigation/header/ModelEnvironment.h"
 
-    # Заголовки Приемников
-    "MoonNavigation/Receiver/ReceiverObject.h"
-    "MoonNavigation/Receiver/StaticReceiver.h"
-    "MoonNavigation/Receiver/DynamicReceiver.h"
-
-    # Заголовки Спутников
-    "MoonNavigation/Satellite/SatelliteObject.h"
-    "MoonNavigation/Satellite/MediumSatellite.h"
-    "MoonNavigation/Satellite/LowSatellite.h"
-    "MoonNavigation/Satellite/GeoSatellite.h"
-
-    # Заголовки Помех
-    "MoonNavigation/Jam/JamObject.h"
-    "MoonNavigation/Jam/StaticJam.h"
-    "MoonNavigation/Jam/DynamicJam.h"
-
-    # Заголовок RINEX
-    "MoonNavigation/RinexWriter/RinexWriter.h"
-)
 # Создаем исполняемый файл
 add_executable(MoonNavigation ${SOURCES})
-target_sources(MoonNavigation PRIVATE ${HEADERS})
 
 # Указываем компилятору ВСЕ папки, где нужно искать #include
 target_include_directories(MoonNavigation PRIVATE
@@ -81,6 +54,7 @@ target_include_directories(MoonNavigation PRIVATE
     "MoonNavigation/Satellite"
     "MoonNavigation/Jam"
     "MoonNavigation/RinexWriter"
+    "MoonNavigation/ResultCollector"
 )
 
 # --- Шаг 3: "Связываем" наш проект с библиотеками ---

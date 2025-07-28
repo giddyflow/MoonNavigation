@@ -1,6 +1,4 @@
 #pragma once
-#ifndef STATICRECEIVER_H
-#define STATICRECEIVER_H
 
 #include "ReceiverObject.h"
 
@@ -15,4 +13,3 @@ public:
 		std::cout << "stat rec created" << std::endl;
 	}
 };
-#endif // !STATICRECEIVER_H

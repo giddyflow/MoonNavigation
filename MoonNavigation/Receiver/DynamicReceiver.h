@@ -1,6 +1,4 @@
 #pragma once
-#ifndef DYNAMICRECEIVER_H
-#define DYNAMICRECEIVER_H
 
 #include "ReceiverObject.h"
 
@@ -21,4 +19,3 @@ public:
 	void Calc() override;
 	void PrintInfo() const override;
 };
-#endif // !DYNAMICRECEIVER_H

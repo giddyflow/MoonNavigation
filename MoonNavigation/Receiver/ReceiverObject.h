@@ -1,6 +1,4 @@
 #pragma once
-#ifndef RECEIVEROBJECT_H
-#define RECEIVEROBJECT_H
 
 #include "Service.h"
 #include "SatelliteObject.h"
@@ -54,19 +52,9 @@ protected:
 	std::vector<VisSat> visible_sats;
 	std::vector<JamState> jams;
 
-	static inline json all_receivers_data = json::object();
-	static inline bool save_handler_subscribed = false;
-
-	void addId(const std::string& key);
-    void addMetrics(const std::string& key);
-    void addCoordsDifference(const std::string& key);
-    void addModelCoords(const std::string& key);
-    void addEstimatedCoords(const std::string& key);
 	//std::ofstream logFile;
 public:
 	ReceiverObject(const json& config, std::shared_ptr<Bus> bus, const std::filesystem::path& output_dir);
     virtual void PrintInfo() const = 0;
     virtual void Calc() = 0;
 };
-
-#endif // !RECEIVEROBJECT_H

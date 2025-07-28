@@ -1,6 +1,4 @@
 #pragma once
-#ifndef LOWSATELLITE_H
-#define LOWSATELLITE_H
 
 #include "SatelliteObject.h"
 
@@ -16,4 +14,3 @@ public:
 		std::cout << "low Satellite created with id " << state.id << '\n';
 	}
 };
-#endif // !LOWSATELLITE_H

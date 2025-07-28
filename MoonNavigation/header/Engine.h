@@ -1,6 +1,4 @@
 #pragma once
-#ifndef ENGINE_H
-#define ENGINE_H
 
 #include "Service.h"
 
@@ -93,9 +91,6 @@ public:
             currentTime += step;
         }
         std::cout << "Modeling finished. Publishing SaveAllResults event." << std::endl;
-        // <<< ИЗМЕНЕНО: Публикуем общее событие для всех сохранятелей
         eventBus->publish("SaveAllResults", nullptr);
     }
 };
-
-#endif // !ENGINE_H

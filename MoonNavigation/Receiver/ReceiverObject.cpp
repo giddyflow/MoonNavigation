@@ -23,30 +23,6 @@ ReceiverObject::ReceiverObject(const json& config, std::shared_ptr<Bus> bus, con
     state.ecef = BLH2ECEF(state.blh);
     sats.clear();
     jams.clear();
-
-
-    std::string nap_key = "nap_" + std::to_string(state.id);
-    all_receivers_data[nap_key] = json::object();
-    all_receivers_data[nap_key]["id"] = state.id;
-	all_receivers_data[nap_key]["dif"] = json::array();
-    all_receivers_data[nap_key]["blh_model_coords"] = json::array();
-    all_receivers_data[nap_key]["xyz_model_coords"] = json::array();
-    all_receivers_data[nap_key]["blh_est_coords"] = json::array();
-    all_receivers_data[nap_key]["xyz_est_coords"] = json::array();
-
-    // Подписываемся на событие сохранения ТОЛЬКО ОДИН РАЗ
-    if (!save_handler_subscribed) {
-        bus->subscribe("SaveAllResults", [output_dir](std::shared_ptr<Event> eventData) {
-            std::filesystem::path outputPath = output_dir / "nap.json";
-            std::cout << "Saving all receiver data to " << outputPath << "..." << std::endl;
-            
-            std::ofstream outFile(outputPath);
-            if (outFile.is_open()) {
-                outFile << all_receivers_data.dump(4);
-            }
-        });
-        save_handler_subscribed = true;
-    }
 }
 
 double ReceiverObject::CalcJamNoise() {
@@ -57,7 +33,7 @@ double ReceiverObject::CalcJamNoise() {
 
 		if (visability) {
 			double dist = norm(jam.blh, state.blh);
-			noise_Prx += db2pow(rx_power(jam.p_tx, 1602e6, dist));
+			noise_Prx += db2pow(rx_power(jam.power_tx, 1602e6, dist));
 		}
 	}
 	return noise_Prx;
@@ -193,84 +169,6 @@ std::tuple<std::vector<double>, std::vector<XYZ>, std::vector<XYZ>> ReceiverObje
 	}
 	return { pseudorange, satpos, Vsat };
 }
-
-
-
-void ReceiverObject::addId(const std::string& key) {
-    all_receivers_data[key]["id"] = state.id;
-}
-
-
-void ReceiverObject::addMetrics(const std::string& key) {
-    json metrics_entry;
-    metrics_entry["time_metrics"] = "секунды"; 
-    metrics_entry["dif_metrics"] = "метры";
-    metrics_entry["power_metrics"] = "дБВт";
-
-    metrics_entry["coords_est_metrics"] = "метры"; 
-    metrics_entry["coords_model_metrics"] = "метры";
-    metrics_entry["blh_coords_est_metrics"] = "метры";
-
-    metrics_entry["blh_coords_est_metrics_h"] = "метры"; 
-    metrics_entry["blh_coords_model_metrics"] = "градусы";
-    metrics_entry["blh_coords_model_metrics_h"] = "метры";
-
-    all_receivers_data[key]["metrics"] = metrics_entry;
-}
-
-void ReceiverObject::addCoordsDifference(const std::string& key) {
-    json dif_entry;
-    dif_entry["dif"]["dif_x"] = state.ecef.x - state.est_ecef.x;
-    dif_entry["dif"]["dif_y"] = state.ecef.y - state.est_ecef.y;
-    dif_entry["dif"]["dif_z"] = state.ecef.z - state.est_ecef.z;
-    dif_entry["timestep"] = state.current_time;
-    
-    all_receivers_data[key]["dif"].push_back(dif_entry);
-}
-
-
-void ReceiverObject::addModelCoords(const std::string& key) {
-
-    json entry_model_coords_blh;
-    BLH coords_ecef_to_blh = ECEF2BLH(state.ecef);
-    entry_model_coords_blh["coords"]["lat"] = coords_ecef_to_blh.lat;
-    entry_model_coords_blh["coords"]["lon"] = coords_ecef_to_blh.lon;
-    entry_model_coords_blh["coords"]["h"] = coords_ecef_to_blh.h;
-	entry_model_coords_blh["timestep"] = state.current_time;
-	all_receivers_data[key]["blh_model_coords"].push_back(entry_model_coords_blh);
-
-    json entry_model_coords_ecef;
-    entry_model_coords_ecef["coords"]["x"] = state.ecef.x;
-    entry_model_coords_ecef["coords"]["y"] = state.ecef.y;
-    entry_model_coords_ecef["coords"]["z"] = state.ecef.z;
-    entry_model_coords_ecef["timestep"] = state.current_time;
-	all_receivers_data[key]["xyz_model_coords"].push_back(entry_model_coords_ecef);
-
-    //full_nap_json_data[nap_data_key][nap_key]["blh_model_coords"].push_back(entry_model_coords_blh);
-    //full_nap_json_data[nap_data_key][nap_key]["xyz_model_coords"].push_back(entry_model_coords_ecef);
-}
-
-void ReceiverObject::addEstimatedCoords(const std::string& key) {
-    json entry_est_coords_blh;
-    BLH coords_ecef_to_blh = ECEF2BLH(state.est_ecef);
-    entry_est_coords_blh["coords"]["lat"] = coords_ecef_to_blh.lat;
-    entry_est_coords_blh["coords"]["lon"] = coords_ecef_to_blh.lon;
-    entry_est_coords_blh["coords"]["h"] = coords_ecef_to_blh.h;
-    entry_est_coords_blh["timestep"] = state.current_time;
-	all_receivers_data[key]["blh_est_coords"].push_back(entry_est_coords_blh);
-
-    json entry_est_coords_ecef;
-    entry_est_coords_ecef["coords"]["x"] = state.est_ecef.x;
-    entry_est_coords_ecef["coords"]["y"] = state.est_ecef.y;
-    entry_est_coords_ecef["coords"]["z"] = state.est_ecef.z;
-    entry_est_coords_ecef["timestep"] = state.current_time;
-	all_receivers_data[key]["xyz_est_coords"].push_back(entry_est_coords_ecef);
-
-    //full_nap_json_data[nap_data_key][nap_key]["blh_est_coords"].push_back(entry_est_coords_blh);
-    //full_nap_json_data[nap_data_key][nap_key]["xyz_est_coords"].push_back(entry_est_coords_ecef);
-    
-}
-
 
 
 

@@ -43,10 +43,8 @@ void DynamicReceiver::Update(std::shared_ptr<NewStepEvent> new_step) {
     LoxodromeStep(dt);
     state.current_time = new_step->currentTime;
 
-	std::string key = "nap_" + std::to_string(this->id);
-    addCoordsDifference(key);
-    addModelCoords(key);
-    addEstimatedCoords(key);
+    auto receiverStateEvent = std::make_shared<ReceiverEvent>(state);
+    eventBus->publish("ReceiverData", receiverStateEvent);
 }
 
 void DynamicReceiver::Calc() {
@@ -55,14 +53,17 @@ void DynamicReceiver::Calc() {
     getVisibleSats(noise_Prx);
     CalcPosition();
     sats.clear();
+    
+    auto receiverStateEvent = std::make_shared<ReceiverEvent>(state);
+    eventBus->publish("ReceiverData", receiverStateEvent);
 }
 
 void DynamicReceiver::LoxodromeStep(double dt) {
     double theta, q, distance, step, ratio;
-    double lat_step = state.blh.lat * M_PI / 180; // ������� -> �������
-    double lon_step = state.blh.lon * M_PI / 180; // ������� -> �������
-    double lat_finish = dyn_state.finish_coords.lat * M_PI / 180; // ������� -> �������
-    double lon_finish = dyn_state.finish_coords.lon * M_PI / 180; // ������� -> �������
+    double lat_step = state.blh.lat * M_PI / 180;
+    double lon_step = state.blh.lon * M_PI / 180;
+    double lat_finish = dyn_state.finish_coords.lat * M_PI / 180;
+    double lon_finish = dyn_state.finish_coords.lon * M_PI / 180;
     double dLon = lon_finish - lon_step;
     double delta_psi = std::log(std::tan(M_PI / 4 + lat_finish / 2) / std::tan(M_PI / 4 + lat_step / 2));
 

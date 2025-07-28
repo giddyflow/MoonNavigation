@@ -1,6 +1,4 @@
 #pragma once
-#ifndef STATICJAM_H
-#define STATICJAM_H
 
 #include "JamObject.h"
 
@@ -14,4 +12,3 @@ public:
 	StaticJam(const json& config, std::shared_ptr<Bus> bus, const std::filesystem::path& output_dir);
 	void PrintInfo() const override;
 };
-#endif // !STATICJAM_H

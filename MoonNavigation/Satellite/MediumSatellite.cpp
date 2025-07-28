@@ -5,45 +5,38 @@ MediumSatellite::MediumSatellite(const json& config, std::shared_ptr<Bus> bus, c
     initOrbitParams();
     //posUpdateSimpleOrbital(state.current_time);
     //ephUpdate();
-    std::string key = "nka_" + std::to_string(this->id);
-    addId(key);
-    addMetrics(key);
     
     eventBus = bus;
     eventBus->subscribe("StartSeconds", [this](std::shared_ptr<Event> eventData) {
-        auto startSecEvent = std::dynamic_pointer_cast<StartSecondsEvent>(eventData);
-        if (startSecEvent) {
+        if (auto startSecEvent = std::dynamic_pointer_cast<StartSecondsEvent>(eventData)) {
             this->setStartSeconds(startSecEvent->start_seconds);
+            // Рассчитываем начальные ECI координаты
             state.eci = ECEFtoECI(state.ecef, state.current_time, start_seconds);
+            
+            // ПУБЛИКУЕМ СОБЫТИЕ С САМЫМ ПЕРВЫМ СОСТОЯНИЕМ
+            // Это важно, чтобы в JSON попали данные для нулевого момента времени
+            auto initialSatStateEvent = std::make_shared<SatelliteEvent>(state);
+            eventBus->publish("MedSatData", initialSatStateEvent);
         }
-        });
+    });
 
     eventBus->subscribe("NewStep", [this](std::shared_ptr<Event> eventData) {
-        //std::cout << "Received event: " << typeid(*eventData).name() << std::endl;
-        auto newStepData = std::dynamic_pointer_cast<NewStepEvent>(eventData);
-        if (newStepData) {
+        if (auto newStepData = std::dynamic_pointer_cast<NewStepEvent>(eventData)) {
             this->Update(newStepData);
         }
-        });
+    });
 
 }
 
 
 void MediumSatellite::Update(std::shared_ptr<NewStepEvent> eventData) {
     posUpdateSimpleOrbital(eventData->currentTime);
-    ephUpdate();
+    ephUpdate(); 
     state.current_time = eventData->currentTime;
     state.eci = ECEFtoECI(state.ecef, state.current_time, start_seconds);
-    
+
     auto newMedSatData = std::make_shared<SatelliteEvent>(state);
     eventBus->publish("MedSatData", newMedSatData);
-
-    std::string key = "nka_" + std::to_string(this->id);
-    addCoordsDifference(key);
-    addPower(key);
-    addModelCoords(key);
-    addEstimatedCoords(key);
-    addEciModelCoords(key); 
 }
 
 void MediumSatellite::initOrbitParams() {

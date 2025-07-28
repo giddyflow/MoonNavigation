@@ -5,17 +5,16 @@ StaticJam::StaticJam(const json& config, std::shared_ptr<Bus> bus, const std::fi
 
 	eventBus = bus;
 	eventBus->subscribe("NewStep", [this](std::shared_ptr<Event> eventData) {
-		//std::cout << "Received event: " << typeid(*eventData).name() << std::endl;
-		auto newStepData = std::dynamic_pointer_cast<NewStepEvent>(eventData);
-		if (newStepData) {
+		if (auto newStepData = std::dynamic_pointer_cast<NewStepEvent>(eventData)) {
 			this->Update(newStepData);
 		}
-		});
+	});
 }
 
 void StaticJam::Update(std::shared_ptr<NewStepEvent> eventData){
+    state.current_time = eventData->currentTime;
 	auto newJamData = std::make_shared<JamEvent>(state);
-	eventBus->publish("StatJamData", newJamData);
+	eventBus->publish("JamData", newJamData);
 }
 
 void StaticJam::PrintInfo() const {

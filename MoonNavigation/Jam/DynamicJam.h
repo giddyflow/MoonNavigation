@@ -1,6 +1,4 @@
 #pragma once
-#ifndef DYNAMICJAM_H
-#define DYNAMICJAM_H
 
 #include "JamObject.h"
 
@@ -15,4 +13,3 @@ public:
 		std::cout << "dyn jam created" << std::endl;
 	}
 };
-#endif // !DYNAMICJAM_H

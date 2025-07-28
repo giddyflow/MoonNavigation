@@ -1,6 +1,4 @@
 #pragma once
-#ifndef OBJECTFACTORY_H
-#define OBJECTFACTORY_H
 
 #include "LowSatellite.h"
 #include "GeoSatellite.h"
@@ -44,11 +42,5 @@ public:
         if (type == "Dynamic") return std::make_shared<DynamicJam>(config, bus, output_dir);
         return nullptr;
     }
-
-    //std::shared_ptr<Engine> CreateEngine(const std::string& place, const json& config) override {
-    //    //���� ����� ������� ������ ������ ��� ���� � �����, ������ ��������������� �����
-    //    return std::make_shared<Engine>(config);;
-    //}
 };
 
-#endif // !OBJECTFACTORY_H
