@@ -63,8 +63,6 @@ target_link_libraries(MoonNavigation PRIVATE
     nlohmann_json
 )
 
-
-
 # --- Остальная часть файла без изменений ---
 if(MSVC)
     target_compile_options(MoonNavigation PRIVATE /W4)
