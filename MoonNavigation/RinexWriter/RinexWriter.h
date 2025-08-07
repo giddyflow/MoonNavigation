@@ -1,27 +1,16 @@
 #pragma once
+
 #include "Service.h"
-#include "Engine.h"
-
-struct RinexObservation {
-    int sat_id;
-    char system;
-    double c1;
-    double l1;
-    double d1;
-    double s1;
-};
-
-struct RinexEpoch {
-    std::vector<RinexObservation> obs;
-};
+#include "RinexTypes.h"
+#include "EventBus.h" 
 
 class RinexWriter {
 private:
-    void createHeader();
-    void processEpoch();
+    void createHeader(json config);
+    void processEpoch(double epoch_time, const RinexEpoch& epoch);
     std::shared_ptr<Bus> eventBus;
     std::ofstream m_file;
 public:
-    RinexWriter(std::shared_ptr<Bus> bus, json date);
+    RinexWriter(std::shared_ptr<Bus> bus, json config);
     ~RinexWriter();
 };

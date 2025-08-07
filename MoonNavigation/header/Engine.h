@@ -22,6 +22,15 @@ public:
     ~StartSecondsEvent() {}
 };
 
+class ReceiverMeasurementsReadyEvent : public Event {
+public:
+    double epoch_time;
+    RinexEpoch epoch_data;
+
+    ReceiverMeasurementsReadyEvent(double time, const RinexEpoch& data)
+        : epoch_time(time), epoch_data(data) {}
+};
+
 class Object {
 private:
     static inline int next_anonymous_id = -1;
@@ -39,9 +48,6 @@ public:
 
     virtual void Update(std::shared_ptr<NewStepEvent> eventData) = 0;
     virtual ~Object() = default;
-
-    // getResults() больше не нужен в этой архитектуре, его можно удалить.
-    // virtual json getResults() const { return json::object(); }
 
     double current_time;
 };
