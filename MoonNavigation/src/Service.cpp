@@ -573,6 +573,19 @@ std::tm parseTime(const std::string& time_str) {
     return tm;
 }
 
+
+std::tuple<int, int, int, int, int, int> parseDateTime(const std::string& date) {
+    std::stringstream ss(date);
+    int year, month, day, hour, minute, second;
+    ss >> year >> month >> day >> hour >> minute >> second;
+
+    if (ss.fail() || !ss.eof()) {
+        throw std::runtime_error("Некорректный формат строки даты и времени: " + date);
+    }
+
+    return std::make_tuple(year, month, day, hour, minute, second);
+}
+
 std::pair<double, double> getStopTime(const json& config) {
     std::string start_time_str = config["start_time"];
     std::string stop_time_str = config["stop_time"];

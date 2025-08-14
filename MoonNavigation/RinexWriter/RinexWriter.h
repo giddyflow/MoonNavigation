@@ -14,3 +14,4 @@ public:
     RinexWriter(std::shared_ptr<Bus> bus, json config);
     ~RinexWriter();
 };
+

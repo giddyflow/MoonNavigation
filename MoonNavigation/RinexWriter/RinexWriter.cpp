@@ -1,6 +1,5 @@
 #include "RinexWriter.h"
 
-// Вспомогательная функция для получения текущей даты в формате RINEX
 std::string getCurrentDateForHeader() {
     auto now = std::chrono::system_clock::now();
     std::time_t now_time = std::chrono::system_clock::to_time_t(now);
@@ -25,8 +24,25 @@ std::string getCurrentDateForHeader() {
 
 RinexWriter::RinexWriter(std::shared_ptr<Bus> bus, json config) {
 
-}
+    this->eventBus = bus;
+    std::string filename = "output.obs";
+    m_file.open(filename, std::ios::out);
 
+    if (!m_file.is_open()) {
+        std::cerr << "ERROR: Could not open RINEX file: " << filename << std::endl;
+        return; 
+    }
+    
+    createHeader(config);
+
+    eventBus->subscribe("ReceiverMeasurementsReady", [this](std::shared_ptr<Event> eventData) {
+        auto measurementsEvent = std::dynamic_pointer_cast<ReceiverMeasurementsReadyEvent>(eventData);
+    
+        if (measurementsEvent) {
+            this->processEpoch(measurementsEvent->epoch_time, measurementsEvent->epoch_data);
+        }
+    });
+}
 
 
 RinexWriter::~RinexWriter() {
@@ -73,13 +89,12 @@ void RinexWriter::createHeader(json config) {
     double interval = config.value("period", 1.0);
     m_file << std::setprecision(3) << std::setw(10) << interval << std::setw(50) << ""
            << "INTERVAL" << std::endl;
-
-    int year = config["time"].value("year", 2024);
-    int month = config["time"].value("month", 1);
-    int day = config["time"].value("day", 1);
+    std::string start_time_str = config.at("start_time").get<std::string>();
+    int year, month, day;
+    std::tie(year, month, day, std::ignore, std::ignore, std::ignore) = parseDateTime(start_time_str);
     m_file << std::setw(6) << year << std::setw(6) << month << std::setw(6) << day
            << std::setw(6) << 0 << std::setw(6) << 0 << std::setw(13) << std::setprecision(7) << 0.0
-           << "      GPS" << " " // Система времени, обычно GPS
+           << "      GPS" << " "
            << "TIME OF FIRST OBS" << std::endl;
 
     m_file << std::left << std::setw(60) << "" << "END OF HEADER" << std::endl;
@@ -88,4 +103,47 @@ void RinexWriter::createHeader(json config) {
 
 void RinexWriter::processEpoch(double epoch_time, const RinexEpoch& epoch) {
 
+    if (!m_file.is_open() || epoch.obs.empty()) {
+        return;
+    }
+
+    time_t time_sec_part = static_cast<time_t>(epoch_time);
+    std::tm tm_utc;
+    double fractional_seconds = epoch_time - time_sec_part;
+
+    #if defined(_WIN32)
+        gmtime_s(&tm_utc, &time_sec_part);
+    #elif defined(__linux__)
+        gmtime_r(&time_sec_part, &tm_utc);
+    #else
+        #pragma message("Warning: Using non-thread-safe gmtime() on an unsupported OS.")
+        std::tm* tm_ptr = std::gmtime(&time_sec_part);
+        if (tm_ptr) {
+            tm_utc = *tm_ptr;
+        }
+    #endif
+
+    m_file << "> " << std::setw(4) << tm_utc.tm_year + 1900
+           << std::setw(3) << tm_utc.tm_mon + 1
+           << std::setw(3) << tm_utc.tm_mday
+           << std::setw(3) << tm_utc.tm_hour
+           << std::setw(3) << tm_utc.tm_min
+           << std::setw(11) << std::setprecision(7) << std::fixed << (tm_utc.tm_sec + fractional_seconds)
+           << "  0"
+           << std::setw(3) << epoch.obs.size() << std::endl;
+
+    for (const auto& obs : epoch.obs) {
+        m_file << obs.system << std::setw(2) << std::setfill('0') << obs.sat_id << std::setfill(' ');
+        
+        // C1 (Псевдодальность)
+        m_file << std::right << std::setw(14) << std::setprecision(3) << std::fixed << obs.c1 << "  ";
+        // L1 (Фаза несущей)
+        m_file << std::right << std::setw(14) << std::setprecision(3) << std::fixed << obs.l1 << "  ";
+        // D1 (Доплер)
+        m_file << std::right << std::setw(14) << std::setprecision(3) << std::fixed << obs.d1 << "  ";
+        // S1 (Отношение сигнал/шум)
+        m_file << std::right << std::setw(14) << std::setprecision(3) << std::fixed << obs.s1 << "  ";
+        
+        m_file << std::endl;
+    }
 }

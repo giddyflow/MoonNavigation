@@ -19,6 +19,7 @@ set(SOURCES
     # Основные файлы
     "MoonNavigation/src/main.cpp"
     "MoonNavigation/src/Service.cpp"
+    "MoonNavigation/src/Engine.cpp"
     "MoonNavigation/src/ModelEnvironment.cpp"
 
     # Модуль Приемников
@@ -40,6 +41,7 @@ set(SOURCES
     # Модуль RINEX
     "MoonNavigation/RinexWriter/RinexWriter.cpp"
 
+    # логгер json
     "MoonNavigation/ResultCollector/ResultCollector.cpp"
 )
 

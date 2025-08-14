@@ -131,7 +131,6 @@ BLH ECEF2BLH(XYZ ecef);
 
 Clock markovModelOrder1(Clock clock, double dt, double instability);
 
-
 DOP CalcPseudoRangeDOP(std::vector<XYZ> posts, XYZ X0);
 
 ResultPseudoVeloMNK mnkVeloCoordsTime(std::vector<double> vr, std::vector<XYZ> posts, XYZ V0, XYZ X0);
@@ -139,9 +138,10 @@ ResultPseudoVeloMNK mnkPseudoVeloCoordsTime(std::vector<double> vr, std::vector<
 ResultPseudoRangeMNK mnkPseudoRangeCoordsTime(std::vector<double> d, std::vector<XYZ> posts, XYZ X0);
 ResultRangeMNK mnkRangeCoords(std::vector<double> d, std::vector<XYZ> posts, XYZ X0);
 
-VisSat satVisabilityForViewPoint(const XYZ view_point_pos,
-	const XYZ veiw_point_vel, const XYZ sat_pos, const XYZ sat_vel, const double mask);
+VisSat satVisabilityForViewPoint(const XYZ view_point_pos, const XYZ veiw_point_vel, const XYZ sat_pos, const XYZ sat_vel, const double mask);
 
 std::tm parseTime(const std::string& time_str);
 std::pair<double, double> getStopTime(const json& config);
 double secondsFromStartOfDay(const std::tm& time);
+
+std::tuple<int, int, int, int, int, int> parseDateTime(const std::string& date) ;

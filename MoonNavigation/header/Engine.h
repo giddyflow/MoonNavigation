@@ -1,72 +1,8 @@
 #pragma once
 
-#include "Service.h"
+#include "EventBus.h"
 
-class Event
-{
-public:
-    virtual ~Event() = default;
-};
-
-class NewStepEvent : public Event {
-public:
-    double currentTime;
-    NewStepEvent(double time) : currentTime(time) {}
-    ~NewStepEvent() {}
-};
-
-class StartSecondsEvent : public Event {
-public:
-    double start_seconds;
-    StartSecondsEvent(double seconds) : start_seconds(seconds) {}
-    ~StartSecondsEvent() {}
-};
-
-class ReceiverMeasurementsReadyEvent : public Event {
-public:
-    double epoch_time;
-    RinexEpoch epoch_data;
-
-    ReceiverMeasurementsReadyEvent(double time, const RinexEpoch& data)
-        : epoch_time(time), epoch_data(data) {}
-};
-
-class Object {
-private:
-    static inline int next_anonymous_id = -1;
-
-public:
-    int id;
-
-    explicit Object(const json& config) {
-        if (config.contains("id") && config["id"].is_number()) {
-            this->id = config["id"].get<int>();
-        } else {
-            this->id = next_anonymous_id--;
-        }
-    }
-
-    virtual void Update(std::shared_ptr<NewStepEvent> eventData) = 0;
-    virtual ~Object() = default;
-
-    double current_time;
-};
-
-class Bus {
-    std::unordered_map<std::string, std::vector<std::function<void(std::shared_ptr<Event>)>>> eventHandlers;
-public: 
-    void subscribe(const std::string& eventName, std::function<void(std::shared_ptr<Event>)> handler) {
-        eventHandlers[eventName].push_back(handler);
-    }
-
-    void publish(const std::string& eventName, std::shared_ptr<Event> eventData) {
-        if (eventHandlers.count(eventName)) {
-            for (auto& handler : eventHandlers[eventName]) {
-                handler(eventData); 
-            }
-        }
-    }
-};
+std::pair<double, double> getStopTime(const json& config);
 
 class Engine {
 private:
@@ -76,27 +12,9 @@ private:
     double stop_time;
     double start_seconds;
 public:
-    double getStartSecondsForEci() { return start_seconds; }
-    Engine(std::shared_ptr<Bus> bus, json config) {
-        eventBus = bus;
-        step = config["period"];
-        const auto& result = getStopTime(config);
-        stop_time = result.first;
-        start_seconds = result.second;
-    }
+    Engine(std::shared_ptr<Bus> bus, json config);
+    
+    void run();
 
-    void run() {
-        auto startSecEvent = std::make_shared<StartSecondsEvent>(start_seconds);
-        eventBus->publish("StartSeconds", startSecEvent);
-        double currentTime = start_time; 
-        while (currentTime <= stop_time) {
-            std::cout << currentTime << '\n';
-            auto newStepData = std::make_shared<NewStepEvent>(currentTime);
-            eventBus->publish("NewStep", newStepData);
-            eventBus->publish("Calc", nullptr);
-            currentTime += step;
-        }
-        std::cout << "Modeling finished. Publishing SaveAllResults event." << std::endl;
-        eventBus->publish("SaveAllResults", nullptr);
-    }
+    double getStartSecondsForEci() { return start_seconds; }
 };

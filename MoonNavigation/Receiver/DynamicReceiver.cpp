@@ -42,9 +42,6 @@ void DynamicReceiver::Update(std::shared_ptr<NewStepEvent> new_step) {
     state.clock = markovModelOrder1(state.clock, new_step->currentTime - state.current_time, clock_instability);
     LoxodromeStep(dt);
     state.current_time = new_step->currentTime;
-
-    auto receiverStateEvent = std::make_shared<ReceiverEvent>(state);
-    eventBus->publish("ReceiverData", receiverStateEvent);
 }
 
 void DynamicReceiver::Calc() {

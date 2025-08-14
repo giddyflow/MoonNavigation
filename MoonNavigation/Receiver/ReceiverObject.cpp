@@ -77,31 +77,54 @@ double ReceiverObject::CalcSNR(double rxPower, double jamPower) {
 
 void ReceiverObject::CalcPosition() {
 	auto [dist, satpos, vsatpos] = makePseudoRangeMeasurements();
+	if (dist.size() < 4) {
+        state.est = false;
+        state.est_ecef = {NAN, NAN, NAN};
+        state.est_velocity = {NAN, NAN, NAN};
+        state.residual = {NAN, NAN, NAN};
+        state.dop = {};
+        state.est_clock = NAN;
+        state.est_drift = NAN;
+        return;
+    }
+
 	auto res = mnkPseudoRangeCoordsTime(dist, satpos, state.ecef);
-	auto [vr, _] = makePseudoVeloMeasurements();
-	auto vrcorr = correctionVelo(vr, vsatpos, satpos, state.ecef);
-	auto res_velo = mnkPseudoVeloCoordsTime(vrcorr, satpos, state.velocity, state.ecef);
-
-
-
-	auto dop = CalcPseudoRangeDOP(satpos, state.ecef);
-	state.dop = dop;
 	state.est = res.flag;
-	
-	state.est_ecef.x = res.res.x;
-	state.est_ecef.y = res.res.y;
-	state.est_ecef.z = res.res.z;
-	
-	state.est_velocity.x = res_velo.res.x;
-	state.est_velocity.y = res_velo.res.y;
-	state.est_velocity.z = res_velo.res.z;
-	
-	state.est_clock = res.res.T / EarthConstants::c;
-	state.est_drift = res_velo.res.T / EarthConstants::c;
+	if (state.est) {
+		
+		state.est_ecef.x = res.res.x;
+		state.est_ecef.y = res.res.y;
+		state.est_ecef.z = res.res.z;
+		state.est_clock = res.res.T / EarthConstants::c;
+		
+		state.dop = CalcPseudoRangeDOP(satpos, state.est_ecef);
 
-	state.residual.x = state.ecef.x - state.est_ecef.x;
-	state.residual.y = state.ecef.y - state.est_ecef.y;
-	state.residual.z = state.ecef.z - state.est_ecef.z;
+		state.residual.x = state.ecef.x - state.est_ecef.x;
+		state.residual.y = state.ecef.y - state.est_ecef.y;
+		state.residual.z = state.ecef.z - state.est_ecef.z;
+
+		auto [vr, _] = makePseudoVeloMeasurements();
+
+		auto vrcorr = correctionVelo(vr, vsatpos, satpos, state.ecef);
+		auto res_velo = mnkPseudoVeloCoordsTime(vrcorr, satpos, state.velocity, state.ecef);
+		if (res_velo.flag) {
+			state.est_velocity.x = res_velo.res.x;
+			state.est_velocity.y = res_velo.res.y;
+			state.est_velocity.z = res_velo.res.z;
+			state.est_drift = res_velo.res.T / EarthConstants::c;
+        } else {
+			state.est_velocity = {NAN, NAN, NAN};
+            state.est_drift = NAN;
+		}
+	} else {
+		state.est_ecef = {NAN, NAN, NAN};
+        state.est_velocity = {NAN, NAN, NAN};
+        state.residual = {NAN, NAN, NAN};
+        state.dop = {};
+        state.est_clock = NAN;
+        state.est_drift = NAN;
+	}
+
 }
 
 

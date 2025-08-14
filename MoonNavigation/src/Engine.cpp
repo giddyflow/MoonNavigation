@@ -25,9 +25,7 @@ void Engine::run() {
 
         auto newStepData = std::make_shared<NewStepEvent>(currentTime);
         eventBus->publish("NewStep", newStepData);
-
         eventBus->publish("Calc", nullptr);
-
         currentTime += step;
     }
 

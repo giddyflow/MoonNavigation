@@ -2,6 +2,7 @@
 
 #include "Service.h"
 #include "Engine.h"
+#include "Object.h"
 
 struct SatState {
 	XYZ ecef;

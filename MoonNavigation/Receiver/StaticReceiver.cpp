@@ -30,9 +30,6 @@ void StaticReceiver::Update(std::shared_ptr<NewStepEvent> new_step) {
     double dt = new_step->currentTime - state.current_time;
     state.clock = markovModelOrder1(state.clock, dt, clock_instability);
     state.current_time = new_step->currentTime;
-
-    auto receiverStateEvent = std::make_shared<ReceiverEvent>(state);
-    eventBus->publish("ReceiverData", receiverStateEvent);
 }
 
 void StaticReceiver::Calc() {

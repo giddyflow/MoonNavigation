@@ -5,6 +5,7 @@
 #include "JamObject.h"
 #include "Engine.h"
 #include "RinexWriter.h"
+#include "Object.h"
 
 struct RecState {
 	XYZ ecef;
