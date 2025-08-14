@@ -45,3 +45,5 @@ nkaeci.json
 *.tmp
 *.bak
 *~
+
+*.obs

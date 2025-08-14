@@ -1,9 +1,0 @@
-     3.05           OBSERVATION DATA           M (MIXED)                   RINEX VERSION / TYPE
-MoonNavigation      Grigoriy            20250814 115742 UTC PGM / RUN BY / DATE
-STN1                                                        MARKER NAME
-Grigoriy            MyUniversity                            OBSERVER / AGENCY
-SIM01               MoonNavReceiver     1.0                 REC # / TYPE / VERS
-SIM_ANT             SIM_ANTENNA                             ANT # / TYPE
-        0.0000        0.0000        0.0000                  APPROX POSITION XYZ
-R    4 C1C L1C D1C S1C                       SYS / # / OBS TYPES
-   600.000                                                  INTERVAL
