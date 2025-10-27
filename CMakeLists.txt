@@ -1,10 +1,9 @@
 ﻿cmake_minimum_required(VERSION 3.16)
-project(MoonNavigation LANGUAGES CXX)
+project(Jasmine LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# --- Шаг 1: Описываем наши сторонние библиотеки ---
 add_library(eigen INTERFACE)
 target_include_directories(eigen INTERFACE
     "include/eigen-3.4.0"
@@ -17,65 +16,65 @@ target_include_directories(nlohmann_json INTERFACE
 
 set(SOURCES
     # Основные файлы
-    "MoonNavigation/src/main.cpp"
-    "MoonNavigation/src/Service.cpp"
-    "MoonNavigation/src/Engine.cpp"
-    "MoonNavigation/src/ModelEnvironment.cpp"
+    "Jasmine/src/main.cpp"
+    "Jasmine/src/Service.cpp"
+    "Jasmine/src/Engine.cpp"
+    "Jasmine/src/ModelEnvironment.cpp"
 
     # Модуль Приемников
-    "MoonNavigation/Receiver/ReceiverObject.cpp"
-    "MoonNavigation/Receiver/StaticReceiver.cpp"
-    "MoonNavigation/Receiver/DynamicReceiver.cpp"
+    "Jasmine/Receiver/ReceiverObject.cpp"
+    "Jasmine/Receiver/StaticReceiver.cpp"
+    "Jasmine/Receiver/DynamicReceiver.cpp"
 
     # Модуль Спутников
-    "MoonNavigation/Satellite/SatelliteObject.cpp"
-    "MoonNavigation/Satellite/MediumSatellite.cpp"
-    "MoonNavigation/Satellite/LowSatellite.cpp"
-    "MoonNavigation/Satellite/GeoSatellite.cpp"
+    "Jasmine/Satellite/SatelliteObject.cpp"
+    "Jasmine/Satellite/MediumSatellite.cpp"
+    "Jasmine/Satellite/LowSatellite.cpp"
+    "Jasmine/Satellite/GeoSatellite.cpp"
 
     # Модуль Помех
-    "MoonNavigation/Jam/JamObject.cpp"
-    "MoonNavigation/Jam/StaticJam.cpp"
-    "MoonNavigation/Jam/DynamicJam.cpp"
+    "Jasmine/Jam/JamObject.cpp"
+    "Jasmine/Jam/StaticJam.cpp"
+    "Jasmine/Jam/DynamicJam.cpp"
 
     # Модуль RINEX
-    "MoonNavigation/RinexWriter/RinexWriter.cpp"
+    "Jasmine/RinexWriter/RinexWriter.cpp"
 
     # логгер json
-    "MoonNavigation/ResultCollector/ResultCollector.cpp"
+    "Jasmine/ResultCollector/ResultCollector.cpp"
+    
+    # Модуль расчета доступности
+    "Jasmine/AccessibilityAnalyzer/AccessibilityAnalyzer.cpp"
 )
 
 
-# Создаем исполняемый файл
-add_executable(MoonNavigation ${SOURCES})
+add_executable(Jasmine ${SOURCES})
 
-# Указываем компилятору ВСЕ папки, где нужно искать #include
-target_include_directories(MoonNavigation PRIVATE
-    "MoonNavigation/header"
-    "MoonNavigation/Receiver"
-    "MoonNavigation/Satellite"
-    "MoonNavigation/Jam"
-    "MoonNavigation/RinexWriter"
-    "MoonNavigation/ResultCollector"
+target_include_directories(Jasmine PRIVATE
+    "Jasmine/header"
+    "Jasmine/Receiver"
+    "Jasmine/Satellite"
+    "Jasmine/Jam"
+    "Jasmine/RinexWriter"
+    "Jasmine/ResultCollector"
+    "Jasmine/AccessibilityAnalyzer"
 )
 
-# --- Шаг 3: "Связываем" наш проект с библиотеками ---
-target_link_libraries(MoonNavigation PRIVATE
+target_link_libraries(Jasmine PRIVATE
     eigen
     nlohmann_json
 )
 
-# --- Остальная часть файла без изменений ---
 if(MSVC)
-    target_compile_options(MoonNavigation PRIVATE /W4)
+    target_compile_options(Jasmine PRIVATE /W4)
 else()
-    target_compile_options(MoonNavigation PRIVATE -Wall -Wextra -Wpedantic)
+    target_compile_options(Jasmine PRIVATE -Wall -Wextra -Wpedantic)
 endif()
 
-set(INPUT_FOLDER "${CMAKE_CURRENT_SOURCE_DIR}/MoonNavigation")
+set(INPUT_FOLDER "${CMAKE_CURRENT_SOURCE_DIR}/Jasmine")
 file(TO_NATIVE_PATH "${INPUT_FOLDER}" NATIVE_INPUT_FOLDER)
 if(MSVC)
-    set_target_properties(MoonNavigation PROPERTIES
+    set_target_properties(Jasmine PROPERTIES
         VS_DEBUGGER_COMMAND_ARGUMENTS "\"${NATIVE_INPUT_FOLDER}\""
         VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_BINARY_DIR}"
     )

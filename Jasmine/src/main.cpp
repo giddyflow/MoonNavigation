@@ -7,13 +7,12 @@
 
 #include "ObjectFactory.h"
 #include "Engine.h"
-#include "RinexWriter.h" // Если он вам еще нужен
-#include "ResultCollector.h" // <<< 1. ДОБАВЛЯЕМ НОВЫЙ INCLUDE
+#include "RinexWriter.h" 
+#include "ResultCollector.h" 
+#include "../AccessibilityAnalyzer/AccessibilityAnalyzer.h"
 
 using json = nlohmann::json;
 
-// Функции ProcessSatellites, ProcessReceivers, ProcessInterference остаются БЕЗ ИЗМЕНЕНИЙ.
-// Они правильно создают объекты и не зависят от логики сохранения.
 static void ProcessSatellites(const json& config, ConcreteObjectFactory& factory, std::vector<std::shared_ptr<Object>>& objs, std::shared_ptr<Bus>& bus, const std::filesystem::path& output_dir) {
     if (config.contains("data") && config["data"].is_array()) {
         for (const auto& sat_data : config["data"]) {
@@ -61,16 +60,7 @@ struct SimulationSetup {
     std::vector<std::shared_ptr<Object>> objects;
 };
 
-// Эта функция также остается БЕЗ ИЗМЕНЕНИЙ.
-static SimulationSetup LoadAndCreateObjects(const std::filesystem::path& folderPath, std::shared_ptr<Bus> bus) {
-    std::filesystem::path configFile = folderPath / "in.json";
-    std::ifstream file(configFile);
-    if (!file.is_open()) {
-        throw std::runtime_error("Failed to open config file: " + configFile.string());
-    }
-    
-    json config;
-    file >> config;
+static SimulationSetup LoadAndCreateObjects(const json& config, const std::filesystem::path& folderPath, std::shared_ptr<Bus> bus) {
 
     ConcreteObjectFactory factory;
     std::vector<std::shared_ptr<Object>> objs;
@@ -86,7 +76,7 @@ static SimulationSetup LoadAndCreateObjects(const std::filesystem::path& folderP
     }
 
     if (!config.contains("controller")) {
-        throw std::runtime_error("'controller' section not found in config file.");
+        throw std::runtime_error("В конфигурационном файле отсутствует поле controller");
     }
     
     return { config["controller"], objs };
@@ -101,27 +91,34 @@ int main(int argc, char* argv[]) {
     }
 
     std::filesystem::path folderPath = argv[1];
-    if (!std::filesystem::exists(folderPath / "in.json")) {
+    std::filesystem::path configFilePath = folderPath / "in.json"; 
+    if (!std::filesystem::exists(configFilePath)) {
         std::cerr << "Ошибка: Конфигурационный файл не найден.\n";
         return 2;
     }
 
-    try {
         auto bus = std::make_shared<Bus>();
+
+        std::ifstream file(configFilePath);
+        if (!file.is_open()) {
+            throw std::runtime_error("Failed to open config file: " + configFilePath.string());
+        }
+        json main_config;
+        file >> main_config;
 
         ResultCollector collector(bus, folderPath);
 
-        SimulationSetup setup = LoadAndCreateObjects(folderPath, bus);
+        SimulationSetup setup = LoadAndCreateObjects(main_config, folderPath, bus);
 
         RinexWriter rinex(bus, setup.engine_config);
 
+        std::shared_ptr<AccessibilityAnalyzer> analyzer;
+        if (main_config.contains("accessibility_analysis") && main_config["accessibility_analysis"].value("enabled", false)) {
+            analyzer = std::make_shared<AccessibilityAnalyzer>(main_config["accessibility_analysis"], bus, folderPath);
+        }
+
         Engine engine(bus, setup.engine_config);
         engine.run();
-
-    } catch (const std::exception& e) {
-        std::cerr << "Критическая ошибка во время выполнения: " << e.what() << "\n";
-        return 3;
-    }
 
     return 0;
 }

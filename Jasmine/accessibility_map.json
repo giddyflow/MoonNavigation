@@ -1,0 +1,3525 @@
+{
+    "availability_grid": [
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": -180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": -170.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": -160.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": -150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": -140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": -130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": -119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": -110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": -100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": -90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": -80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": -70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": -59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": -50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": -40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": -29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": -20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": -10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": 0.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": 10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": 20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": 29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": 40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": 50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": 59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": 70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": 80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": 90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": 100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": 110.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -90.0,
+            "lon": 119.99999999999999
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -90.0,
+            "lon": 130.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -90.0,
+            "lon": 140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": 150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": 160.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": 170.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -90.0,
+            "lon": 180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": -180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": -170.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": -160.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": -150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": -140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": -130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": -119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": -110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": -100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": -90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": -80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": -70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": -59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": -50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": -40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": -29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": -20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": -10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": 0.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": 10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": 20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": 29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": 40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": 50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": 59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": 70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": 80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": 90.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -80.0,
+            "lon": 100.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -80.0,
+            "lon": 110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": 119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": 130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": 140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": 150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -80.0,
+            "lon": 160.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -80.0,
+            "lon": 170.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -80.0,
+            "lon": 180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": -180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": -170.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": -160.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": -150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": -140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": -130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": -119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": -110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": -100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": -90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": -80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": -70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": -59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": -50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": -40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": -29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": -20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": -10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": 0.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": 10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": 20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": 29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": 40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": 50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": 59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": 70.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -70.0,
+            "lon": 80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": 90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": 100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": 110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": 119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": 130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -70.0,
+            "lon": 140.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -70.0,
+            "lon": 150.00000000000003
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -70.0,
+            "lon": 160.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -70.0,
+            "lon": 170.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -70.0,
+            "lon": 180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": -180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": -170.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": -160.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": -150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": -140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": -130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": -119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": -110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": -100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": -90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": -80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": -70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": -59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": -50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": -40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": -29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": -20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": -10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": 0.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": 10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": 20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": 29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": 40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": 50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": 59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": 70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": 80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": 90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": 100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": 110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": 119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -59.99999999999999,
+            "lon": 130.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -59.99999999999999,
+            "lon": 140.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -59.99999999999999,
+            "lon": 150.00000000000003
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -59.99999999999999,
+            "lon": 160.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -59.99999999999999,
+            "lon": 170.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -59.99999999999999,
+            "lon": 180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": -180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": -170.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": -160.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": -150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": -140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": -130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": -119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": -110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": -100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": -90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": -80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": -70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": -59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": -50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": -40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": -29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": -20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": -10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": 0.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": 10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": 20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": 29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": 40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": 50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": 59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": 70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": 80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": 90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": 100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": 110.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -50.0,
+            "lon": 119.99999999999999
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -50.0,
+            "lon": 130.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -50.0,
+            "lon": 140.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -50.0,
+            "lon": 150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": 160.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": 170.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -50.0,
+            "lon": 180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": -180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": -170.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": -160.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": -150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": -140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": -130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": -119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": -110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": -100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": -90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": -80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": -70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": -59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": -50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": -40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": -29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": -20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": -10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": 0.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": 10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": 20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": 29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": 40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": 50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": 59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": 70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": 80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": 90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": 100.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -40.0,
+            "lon": 110.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -40.0,
+            "lon": 119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": 130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": 140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": 150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -40.0,
+            "lon": 160.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -40.0,
+            "lon": 170.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -40.0,
+            "lon": 180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": -180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": -170.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": -160.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": -150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": -140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": -130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": -119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": -110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": -100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": -90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": -80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": -70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": -59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": -50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": -40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": -29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": -20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": -10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": 0.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": 10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": 20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": 29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": 40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": 50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": 59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": 70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": 80.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -29.999999999999996,
+            "lon": 90.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -29.999999999999996,
+            "lon": 100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": 110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": 119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": 130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": 140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -29.999999999999996,
+            "lon": 150.00000000000003
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -29.999999999999996,
+            "lon": 160.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -29.999999999999996,
+            "lon": 170.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -29.999999999999996,
+            "lon": 180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": -180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": -170.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": -160.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": -150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": -140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": -130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": -119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": -110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": -100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": -90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": -80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": -70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": -59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": -50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": -40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": -29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": -20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": -10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": 0.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": 10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": 20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": 29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": 40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": 50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": 59.99999999999999
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -20.0,
+            "lon": 70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": 80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": 90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": 100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": 110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": 119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -20.0,
+            "lon": 130.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -20.0,
+            "lon": 140.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -20.0,
+            "lon": 150.00000000000003
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -20.0,
+            "lon": 160.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -20.0,
+            "lon": 170.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -20.0,
+            "lon": 180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": -180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": -170.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": -160.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": -150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": -140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": -130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": -119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": -110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": -100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": -90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": -80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": -70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": -59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": -50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": -40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": -29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": -20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": -10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": 0.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": 10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": 20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": 29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": 40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": 50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": 59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": 70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": 80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": 90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": 100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": 110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": 119.99999999999999
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -10.0,
+            "lon": 130.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -10.0,
+            "lon": 140.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -10.0,
+            "lon": 150.00000000000003
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": -10.0,
+            "lon": 160.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": 170.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": -10.0,
+            "lon": 180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": -180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": -170.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": -160.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": -150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": -140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": -130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": -119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": -110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": -100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": -90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": -80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": -70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": -59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": -50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": -40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": -29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": -20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": -10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": 0.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": 10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": 20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": 29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": 40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": 50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": 59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": 70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": 80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": 90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": 100.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 0.0,
+            "lon": 110.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 0.0,
+            "lon": 119.99999999999999
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 0.0,
+            "lon": 130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": 140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": 150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": 160.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 0.0,
+            "lon": 170.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 0.0,
+            "lon": 180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": -180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": -170.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": -160.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": -150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": -140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": -130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": -119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": -110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": -100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": -90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": -80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": -70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": -59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": -50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": -40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": -29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": -20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": -10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": 0.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": 10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": 20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": 29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": 40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": 50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": 59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": 70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": 80.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 10.0,
+            "lon": 90.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 10.0,
+            "lon": 100.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 10.0,
+            "lon": 110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": 119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": 130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": 140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 10.0,
+            "lon": 150.00000000000003
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 10.0,
+            "lon": 160.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 10.0,
+            "lon": 170.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 10.0,
+            "lon": 180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": -180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": -170.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": -160.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": -150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": -140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": -130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": -119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": -110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": -100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": -90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": -80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": -70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": -59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": -50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": -40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": -29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": -20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": -10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": 0.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": 10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": 20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": 29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": 40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": 50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": 59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": 70.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 20.0,
+            "lon": 80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": 90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": 100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": 110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": 119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": 130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 20.0,
+            "lon": 140.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 20.0,
+            "lon": 150.00000000000003
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 20.0,
+            "lon": 160.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 20.0,
+            "lon": 170.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 20.0,
+            "lon": 180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": -180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": -170.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": -160.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": -150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": -140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": -130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": -119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": -110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": -100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": -90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": -80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": -70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": -59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": -50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": -40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": -29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": -20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": -10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": 0.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": 10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": 20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": 29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": 40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": 50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": 59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": 70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": 80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": 90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": 100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": 110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": 119.99999999999999
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 29.999999999999996,
+            "lon": 130.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 29.999999999999996,
+            "lon": 140.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 29.999999999999996,
+            "lon": 150.00000000000003
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 29.999999999999996,
+            "lon": 160.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 29.999999999999996,
+            "lon": 170.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 29.999999999999996,
+            "lon": 180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": -180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": -170.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": -160.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": -150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": -140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": -130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": -119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": -110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": -100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": -90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": -80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": -70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": -59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": -50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": -40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": -29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": -20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": -10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": 0.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": 10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": 20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": 29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": 40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": 50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": 59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": 70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": 80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": 90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": 100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": 110.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 40.0,
+            "lon": 119.99999999999999
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 40.0,
+            "lon": 130.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 40.0,
+            "lon": 140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": 150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": 160.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 40.0,
+            "lon": 170.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 40.0,
+            "lon": 180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": -180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": -170.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": -160.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": -150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": -140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": -130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": -119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": -110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": -100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": -90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": -80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": -70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": -59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": -50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": -40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": -29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": -20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": -10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": 0.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": 10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": 20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": 29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": 40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": 50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": 59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": 70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": 80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": 90.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 50.0,
+            "lon": 100.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 50.0,
+            "lon": 110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": 119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": 130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": 140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": 150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 50.0,
+            "lon": 160.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 50.0,
+            "lon": 170.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 50.0,
+            "lon": 180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": -180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": -170.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": -160.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": -150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": -140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": -130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": -119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": -110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": -100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": -90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": -80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": -70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": -59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": -50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": -40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": -29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": -20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": -10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": 0.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": 10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": 20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": 29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": 40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": 50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": 59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": 70.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 59.99999999999999,
+            "lon": 80.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 59.99999999999999,
+            "lon": 90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": 100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": 110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": 119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": 130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 59.99999999999999,
+            "lon": 140.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 59.99999999999999,
+            "lon": 150.00000000000003
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 59.99999999999999,
+            "lon": 160.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 59.99999999999999,
+            "lon": 170.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 59.99999999999999,
+            "lon": 180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": -180.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": -170.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": -160.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": -150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": -140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": -130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": -119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": -110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": -100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": -90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": -80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": -70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": -59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": -50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": -40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": -29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": -20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": -10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": 0.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": 10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": 20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": 29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": 40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": 50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": 59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": 70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": 80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": 90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": 100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": 110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": 119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 70.0,
+            "lon": 130.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 70.0,
+            "lon": 140.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 70.0,
+            "lon": 150.00000000000003
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 70.0,
+            "lon": 160.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 70.0,
+            "lon": 170.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 70.0,
+            "lon": 180.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 80.0,
+            "lon": -180.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 80.0,
+            "lon": -170.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 80.0,
+            "lon": -160.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 80.0,
+            "lon": -150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": -140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": -130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": -119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": -110.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": -100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": -90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": -80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": -70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": -59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": -50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": -40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": -29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": -20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": -10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": 0.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": 10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": 20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": 29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": 40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": 50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": 59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": 70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": 80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": 90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": 100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": 110.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 80.0,
+            "lon": 119.99999999999999
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 80.0,
+            "lon": 130.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 80.0,
+            "lon": 140.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 80.0,
+            "lon": 150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": 160.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": 170.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 80.0,
+            "lon": 180.0
+        },
+        {
+            "availability_percent": 94.6,
+            "lat": 90.0,
+            "lon": -180.0
+        },
+        {
+            "availability_percent": 94.6,
+            "lat": 90.0,
+            "lon": -170.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 90.0,
+            "lon": -160.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 90.0,
+            "lon": -150.00000000000003
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 90.0,
+            "lon": -140.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 90.0,
+            "lon": -130.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 90.0,
+            "lon": -119.99999999999999
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 90.0,
+            "lon": -110.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 90.0,
+            "lon": -100.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 90.0,
+            "lon": -90.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 90.0,
+            "lon": -80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 90.0,
+            "lon": -70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 90.0,
+            "lon": -59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 90.0,
+            "lon": -50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 90.0,
+            "lon": -40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 90.0,
+            "lon": -29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 90.0,
+            "lon": -20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 90.0,
+            "lon": -10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 90.0,
+            "lon": 0.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 90.0,
+            "lon": 10.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 90.0,
+            "lon": 20.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 90.0,
+            "lon": 29.999999999999996
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 90.0,
+            "lon": 40.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 90.0,
+            "lon": 50.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 90.0,
+            "lon": 59.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 90.0,
+            "lon": 70.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 90.0,
+            "lon": 80.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 90.0,
+            "lon": 90.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 90.0,
+            "lon": 100.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 90.0,
+            "lon": 110.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 90.0,
+            "lon": 119.99999999999999
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 90.0,
+            "lon": 130.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 90.0,
+            "lon": 140.0
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 90.0,
+            "lon": 150.00000000000003
+        },
+        {
+            "availability_percent": 100.0,
+            "lat": 90.0,
+            "lon": 160.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 90.0,
+            "lon": 170.0
+        },
+        {
+            "availability_percent": 97.3,
+            "lat": 90.0,
+            "lon": 180.0
+        }
+    ],
+    "metadata": {
+        "mask_angle_deg": 7.499999999999999,
+        "metric": "Availability",
+        "min_visible_sats": 4,
+        "total_steps_processed": 37
+    }
+}

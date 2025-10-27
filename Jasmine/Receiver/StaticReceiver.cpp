@@ -21,6 +21,12 @@ StaticReceiver::StaticReceiver(const json& config, std::shared_ptr<Bus> bus, con
         }
     });
 
+    eventBus->subscribe("AccessibilityStep", [this](std::shared_ptr<Event> eventData) {
+        if (auto newStatJamData = std::dynamic_pointer_cast<JamEvent>(eventData)) {
+            jams.push_back(newStatJamData->jamState);
+        }
+    });
+
     eventBus->subscribe("Calc", [this](std::shared_ptr<Event> eventData) {
         Calc();
     });

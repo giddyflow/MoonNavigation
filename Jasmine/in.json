@@ -1,0 +1,265 @@
+{
+    "name": "TestModel",
+    "accessibility_analysis": {
+        "enabled": true,
+        "metric": "Availability",
+        "output_file": "accessibility_map.json",
+        "grid": {
+            "is_global": true,
+            "lat_step_deg": 10.0,
+            "lon_step_deg": 10.0
+        },
+        "parameters": {
+            "mask_angle_deg": 7.5,
+            "min_visible_sats": 4
+        }
+    },
+    "nka": {
+        "data": [
+            {
+                "type": "Medium",
+                "orbital_height": 19100e3,
+                "working_points": 1,
+                "sat_power": 30,
+                "std_dev": {
+                    "x": 10,
+                    "y": 10,
+                    "z": 10
+                },
+                "clock": {
+                    "shift": 1e-9,
+                    "drift": 1e-11,
+                    "instability": 1e-8
+                }
+            },
+            {
+                "type": "Medium",
+                "orbital_height": 19100e3,
+                "working_points": 2,
+                "sat_power": 30,
+                "std_dev": {
+                    "x": 10,
+                    "y": 10,
+                    "z": 10
+                },
+                "clock": {
+                    "shift": 1e-9,
+                    "drift": 1e-11,
+                    "instability": 1e-8
+                }
+            },
+            {
+                "type": "Medium",
+                "orbital_height": 19100e3,
+                "working_points": 3,
+                "sat_power": 30,
+                "std_dev": {
+                    "x": 10,
+                    "y": 10,
+                    "z": 10
+                },
+                "clock": {
+                    "shift": 1e-9,
+                    "drift": 1e-11,
+                    "instability": 1e-8
+                }
+            },
+            {
+                "type": "Medium",
+                "orbital_height": 19100e3,
+                "working_points": 4,
+                "sat_power": 30,
+                "std_dev": {
+                    "x": 10,
+                    "y": 10,
+                    "z": 10
+                },
+                "clock": {
+                    "shift": 1e-9,
+                    "drift": 1e-11,
+                    "instability": 1e-8
+                }
+            },
+            {
+                "type": "Medium",
+                "orbital_height": 19100e3,
+                "working_points": 5,
+                "sat_power": 30,
+                "std_dev": {
+                    "x": 10,
+                    "y": 10,
+                    "z": 10
+                },
+                "clock": {
+                    "shift": 1e-9,
+                    "drift": 1e-11,
+                    "instability": 1e-8
+                }
+            },
+            {
+                "type": "Medium",
+                "orbital_height": 19100e3,
+                "working_points": 6,
+                "sat_power": 30,
+                "std_dev": {
+                    "x": 10,
+                    "y": 10,
+                    "z": 10
+                },
+                "clock": {
+                    "shift": 1e-9,
+                    "drift": 1e-11,
+                    "instability": 1e-8
+                }
+            },
+            {
+                "type": "Medium",
+                "orbital_height": 19100e3,
+                "working_points": 7,
+                "sat_power": 30,
+                "std_dev": {
+                    "x": 10,
+                    "y": 10,
+                    "z": 10
+                },
+                "clock": {
+                    "shift": 1e-9,
+                    "drift": 1e-11,
+                    "instability": 1e-8
+                }
+            },
+            {
+                "type": "Medium",
+                "orbital_height": 19100e3,
+                "working_points": 8,
+                "sat_power": 30,
+                "std_dev": {
+                    "x": 10,
+                    "y": 10,
+                    "z": 10
+                },
+                "clock": {
+                    "shift": 1e-9,
+                    "drift": 1e-11,
+                    "instability": 1e-8
+                }
+            },
+            {
+                "type": "Medium",
+                "orbital_height": 19100e3,
+                "working_points": 9,
+                "sat_power": 30,
+                "std_dev": {
+                    "x": 10,
+                    "y": 10,
+                    "z": 10
+                },
+                "clock": {
+                    "shift": 1e-9,
+                    "drift": 1e-11,
+                    "instability": 1e-8
+                }
+            },
+            {
+                "type": "Medium",
+                "orbital_height": 19100e3,
+                "working_points": 10,
+                "sat_power": 30,
+                "std_dev": {
+                    "x": 10,
+                    "y": 10,
+                    "z": 10
+                },
+                "clock": {
+                    "shift": 1e-9,
+                    "drift": 1e-11,
+                    "instability": 1e-8
+                }
+            },
+            {
+                "type": "Medium",
+                "orbital_height": 19100e3,
+                "working_points": 11,
+                "sat_power": 30,
+                "std_dev": {
+                    "x": 10,
+                    "y": 10,
+                    "z": 10
+                },
+                "clock": {
+                    "shift": 1e-9,
+                    "drift": 1e-11,
+                    "instability": 1e-8
+                }
+            },
+            {
+                "type": "Medium",
+                "orbital_height": 19100e3,
+                "working_points": 12,
+                "sat_power": 30,
+                "std_dev": {
+                    "x": 10,
+                    "y": 10,
+                    "z": 10
+                },
+                "clock": {
+                    "shift": 1e-9,
+                    "drift": 1e-11,
+                    "instability": 1e-8
+                }
+            }    
+    ]
+    },
+    "nap":{
+        "data": [
+            {
+                "type": "Dynamic",
+                "id": 1,
+                "start_coords": {
+                    "lat": 55,
+                    "lon": 37,
+                    "h": 150
+                },
+                "snr_treshold": 18,
+                "suppression_coeff": 20,
+                "PSD": -210,
+                "mask": 10,
+                "velocity": {
+                    "x": 10,
+                    "y": 10,
+                    "z": 5
+                },
+                "azimuth": 20,
+                "finish_coords": {
+                    "lat": 56,
+                    "lon": 38,
+                    "h": 150
+                },
+                "clock": {
+                    "shift": 1e-9,
+                    "drift": 1e-11,
+                    "instability": 1e-8
+                }
+            }
+        ]
+    },
+    "interference": {
+        "data": [
+            {
+                "id": 1,
+                "type": "Static",
+                "coords": {
+                    "lat": 56,
+                    "lon": 38,
+                    "h": 150
+                },
+                "power": -60
+            }
+        ]
+    },
+    "controller": {
+        "start_time": "2024 08 20 11 10 00",
+        "stop_time": "2024 08 20 12 10 00",
+        "period": 100             
+    }
+}

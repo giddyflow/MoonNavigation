@@ -35,6 +35,7 @@ protected:
 	//void log();
 	void getVisibleSats(double jams_power);
 	void CalcPosition();
+	void GetAccessibility();
 	double CalcJamNoise();
 	std::vector<XYZ> getSatVelocity();
 	std::vector<double> correctionVelo(std::vector<double> vr, std::vector<XYZ> vsatpos, std::vector<XYZ> satpos, XYZ res);

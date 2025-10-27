@@ -102,8 +102,6 @@ BLH ECEF2BLH(XYZ ecef) {
 }
 
 XYZ BLH2ENU(BLH blh_ref, BLH blh) {
-    // blh_ref - geo-���������� �������� ������
-    // blh - �������� geo-����������
 
     double cosB = cos(deg2rad(blh_ref.lat));
     double sinB = sin(deg2rad(blh_ref.lat));
@@ -127,11 +125,8 @@ XYZ BLH2ENU(BLH blh_ref, BLH blh) {
 }
 
 XYZ ECEF2ENU(XYZ xyz_ref, XYZ xyz_post) {
-    // xyz_ref - geo-���������� �������� ������
-    // blh - �������� geo-����������
 
     BLH blh_ref = ECEF2BLH(xyz_ref);
-    BLH blh = ECEF2BLH(xyz_post);
     double cosB = cos(deg2rad(blh_ref.lat));
     double sinB = sin(deg2rad(blh_ref.lat));
     double cosL = cos(deg2rad(blh_ref.lon));

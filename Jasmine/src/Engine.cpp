@@ -10,7 +10,6 @@ Engine::Engine(std::shared_ptr<Bus> bus, json config) {
     const auto& result = getStopTime(config);
     this->stop_time = result.first;
     this->start_seconds = result.second;
-    
     this->start_time = 0.0;
 }
 
@@ -26,6 +25,7 @@ void Engine::run() {
         auto newStepData = std::make_shared<NewStepEvent>(currentTime);
         eventBus->publish("NewStep", newStepData);
         eventBus->publish("Calc", nullptr);
+        eventBus->publish("AccessibilityStep", newStepData);
         currentTime += step;
     }
 
