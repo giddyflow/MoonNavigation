@@ -22,10 +22,3 @@ SatelliteObject::SatelliteObject(const json& config, std::shared_ptr<Bus> bus, c
 void SatelliteObject::setStartSeconds(double start_seconds) {
     this->start_seconds = start_seconds;
 }
-
-
-
-//void SatelliteObject::Update(std::shared_ptr<NewStepEvent> eventData) {
-//	auto newSatData = std::make_shared<SatelliteEvent>(state);
-//	eventBus->publish("SatData", newSatData);
-//}

@@ -12,19 +12,26 @@ DynamicReceiver::DynamicReceiver(const json& config, std::shared_ptr<Bus> bus, c
     dyn_state.finish_coords.h = end["h"];
 
     eventBus = bus;
+
+    eventBus->subscribe("AccessibilityStep", [this](std::shared_ptr<Event> eventData) {
+        if (auto newStatJamData = std::dynamic_pointer_cast<JamEvent>(eventData)) {
+            jams.push_back(newStatJamData->jamState);
+        }
+    });
+
     eventBus->subscribe("NewStep", [this](std::shared_ptr<Event> eventData) {
         auto newStepData = std::dynamic_pointer_cast<NewStepEvent>(eventData);
         if (newStepData) {
             this->Update(newStepData);
         }
-        });
+    });
 
     eventBus->subscribe("MedSatData", [this](std::shared_ptr<Event> eventData) {
         auto newSatData = std::dynamic_pointer_cast<SatelliteEvent>(eventData);
         if (newSatData) {
             sats.push_back(newSatData->satState);
         }
-        });
+    });
 
     eventBus->subscribe("Calc", [this](std::shared_ptr<Event> eventData) {
         Calc();

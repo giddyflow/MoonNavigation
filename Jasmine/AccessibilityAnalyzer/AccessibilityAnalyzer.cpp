@@ -54,12 +54,10 @@ void AccessibilityAnalyzer::initializeGrid() {
             grid.push_back(point);
         }
     }
-    // <-- ИЗМЕНЕНИЕ: Инициализируем вектор счетчиков нулями
     availability_counters.resize(grid.size(), 0);
 }
 
 void AccessibilityAnalyzer::handleNewStep(std::shared_ptr<Event> e) {
-    // Эта функция теперь не делает ничего, так как очистка происходит в Calc
 }
 
 void AccessibilityAnalyzer::handleSatelliteData(std::shared_ptr<Event> e) {
@@ -68,16 +66,12 @@ void AccessibilityAnalyzer::handleSatelliteData(std::shared_ptr<Event> e) {
     current_step_sat_states.push_back(satEvent->satState);
 }
 
-// <-- ИЗМЕНЕНИЕ: Основная логика теперь здесь
 void AccessibilityAnalyzer::handleCalc(std::shared_ptr<Event> e) {
     if (current_step_sat_states.empty()) {
-        // Пропускаем шаг, если не было данных о спутниках
         current_step_sat_states.clear();
         return;
     }
     
-
-    // Проходим по каждой точке сетки и обновляем ее счетчик
     for (size_t i = 0; i < grid.size(); ++i) {
         int visible_sats = countVisibleSatsForPoint(grid[i]);
         if (visible_sats >= min_visible_sats) {
@@ -86,10 +80,9 @@ void AccessibilityAnalyzer::handleCalc(std::shared_ptr<Event> e) {
     }
     
     total_steps_processed++;
-    current_step_sat_states.clear(); // Очищаем данные, готовясь к следующему шагу
+    current_step_sat_states.clear();
 }
 
-// <-- ИЗМЕНЕНИЕ: Новая вспомогательная функция
 int AccessibilityAnalyzer::countVisibleSatsForPoint(const GridPoint& point) {
     int count = 0;
     for (const auto& sat_state : current_step_sat_states) {
@@ -101,11 +94,9 @@ int AccessibilityAnalyzer::countVisibleSatsForPoint(const GridPoint& point) {
     return count;
 }
 
-// <-- ИЗМЕНЕНИЕ: Полностью новая логика сохранения
 void AccessibilityAnalyzer::saveResults(std::shared_ptr<Event> e) {
     json outputJson;
 
-    // Заполняем метаданные
     outputJson["metadata"]["metric"] = metric;
     outputJson["metadata"]["total_steps_processed"] = total_steps_processed;
     outputJson["metadata"]["mask_angle_deg"] = rad2deg(mask_angle_rad);
@@ -117,10 +108,8 @@ void AccessibilityAnalyzer::saveResults(std::shared_ptr<Event> e) {
         std::cout << "Warning: No steps were processed. Availability data will be empty." << std::endl;
     } else {
         for (size_t i = 0; i < grid.size(); ++i) {
-            // Расчет процента доступности
             double availability_percent = (static_cast<double>(availability_counters[i]) / total_steps_processed) * 100.0;
-            
-            // Округление до одного знака после запятой
+        
             availability_percent = std::round(availability_percent * 10.0) / 10.0;
 
             json pointData;

@@ -31,8 +31,6 @@ public:
 
 class ReceiverObject : public Object {
 protected:
-	//void createLogHeader();
-	//void log();
 	void getVisibleSats(double jams_power);
 	void CalcPosition();
 	void GetAccessibility();
@@ -54,7 +52,6 @@ protected:
 	std::vector<VisSat> visible_sats;
 	std::vector<JamState> jams;
 
-	//std::ofstream logFile;
 public:
 	ReceiverObject(const json& config, std::shared_ptr<Bus> bus, const std::filesystem::path& output_dir);
     virtual void PrintInfo() const = 0;

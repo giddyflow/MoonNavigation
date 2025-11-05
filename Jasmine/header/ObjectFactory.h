@@ -18,7 +18,6 @@ public:
     virtual std::shared_ptr<SatelliteObject> CreateSatellite(const std::string& type, const json& config, std::shared_ptr<Bus> bus, const std::filesystem::path& output_dir) = 0;
     virtual std::shared_ptr<ReceiverObject> CreateReceiver(const std::string& type, const json& config, std::shared_ptr<Bus> bus, const std::filesystem::path& output_dir) = 0;
     virtual std::shared_ptr<JamObject> CreateJam(const std::string& type, const json& config, std::shared_ptr<Bus> bus, const std::filesystem::path& output_dir) = 0;
-    //virtual std::shared_ptr<Engine> CreateEngine(const std::string& place, const json& config) = 0;
 };
 
 

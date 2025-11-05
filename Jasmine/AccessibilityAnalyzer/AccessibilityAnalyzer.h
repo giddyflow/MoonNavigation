@@ -24,7 +24,6 @@ private:
     void saveResults(std::shared_ptr<Event> e);
 
     void initializeGrid();
-    // <-- ИЗМЕНЕНИЕ: Вспомогательная функция, вынесенная из старого calculateMetricForPoint
     int countVisibleSatsForPoint(const GridPoint& point); 
 
     std::shared_ptr<Bus> eventBus;
@@ -37,7 +36,6 @@ private:
 
     std::vector<GridPoint> grid;
     
-    // <-- ИЗМЕНЕНИЕ: Новые поля для хранения состояния
     std::vector<int> availability_counters; // Счетчик "успешных" шагов для каждой точки
     int total_steps_processed;              // Общий счетчик шагов
     std::vector<SatState> current_step_sat_states;

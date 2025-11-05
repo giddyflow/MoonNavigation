@@ -10,11 +10,7 @@ MediumSatellite::MediumSatellite(const json& config, std::shared_ptr<Bus> bus, c
     eventBus->subscribe("StartSeconds", [this](std::shared_ptr<Event> eventData) {
         if (auto startSecEvent = std::dynamic_pointer_cast<StartSecondsEvent>(eventData)) {
             this->setStartSeconds(startSecEvent->start_seconds);
-            // Рассчитываем начальные ECI координаты
             state.eci = ECEFtoECI(state.ecef, state.current_time, start_seconds);
-            
-            // ПУБЛИКУЕМ СОБЫТИЕ С САМЫМ ПЕРВЫМ СОСТОЯНИЕМ
-            // Это важно, чтобы в JSON попали данные для нулевого момента времени
             auto initialSatStateEvent = std::make_shared<SatelliteEvent>(state);
             eventBus->publish("MedSatData", initialSatStateEvent);
         }

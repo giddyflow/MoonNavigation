@@ -11,8 +11,6 @@ public:
 	void initOrbitParams();
 	void posUpdateSimpleOrbital(double t);
 	void ephUpdate();
-	//void log();
-	//void createLogHeader();
 	void Update(std::shared_ptr<NewStepEvent> eventData) override;
 	void PrintInfo() const override {
 		std::cout << "medium Satellite created with id " << state.id << '\n';

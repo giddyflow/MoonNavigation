@@ -190,7 +190,6 @@ ResultRangeMNK mnkRangeCoords(std::vector<double> d, std::vector<XYZ> posts, XYZ
     crd.x = 0;
     crd.y = 0;
     crd.z = 0;
-    //std::pair<bool, XYZ> output;
     ResultRangeMNK output;
     output.flag = false;
     output.res = crd;
